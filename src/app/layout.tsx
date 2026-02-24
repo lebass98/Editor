@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: "듀엣미니의 소소한 일상과 맛있는 이야기들",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/ogg_img.jpg",
         width: 1200,
         height: 630,
         alt: "듀엣미니 블로그",
