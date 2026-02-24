@@ -8,14 +8,14 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white selection:bg-[#ccff00] selection:text-black relative flex flex-col">
       <Navbar />
       
-      {/* SECTION 1: Hero Left, Grid Right (Lime) */}
-      <section className="flex flex-col lg:flex-row w-full bg-[#ccff00]">
-        <div className="w-full lg:w-1/2 h-[50vh] lg:h-screen lg:sticky top-0 relative shrink-0 z-0">
+      {/* SECTION 1: Hero Left, Grid Right (Black) */}
+      <section className="flex flex-col lg:flex-row w-full bg-black text-white">
+        <div className="w-full lg:w-1/2 h-[50vh] lg:h-screen lg:sticky top-0 relative shrink-0 z-0 border-b lg:border-r lg:border-b-0 border-white/10">
           <HeroSection index={0} />
         </div>
         
-        <div className="w-full lg:w-1/2 bg-[#ccff00] text-black relative z-10 min-h-screen">
-          <ArticleGrid theme="lime" offset={0} />
+        <div className="w-full lg:w-1/2 bg-black text-white relative z-10 min-h-screen">
+          <ArticleGrid theme="black" offset={0} />
         </div>
       </section>
 
