@@ -57,8 +57,50 @@ const mockRelated = [
   }
 ];
 
+const MOCK_ARTICLE_DATA: Record<string, any> = {
+  '1': {
+    category: 'WEDDING',
+    title: { line1: '결혼식의 퀄리티를', line2: '높여주는 예쁜 웨딩케이크💙' },
+    excerpt: '퍼플위주로 작업한 심플한 2단 웨딩케이크',
+    date: '2019. 05. 08',
+    author: '듀엣미니',
+    authorImg: '/BlogC.svg',
+    heroImage: '/images/duet-mini-cake.jpg',
+    body1: '안녕하세요:) 듀엣미니입니다! 가게오픈하느라 신경쓸게 한두가지가 아니어서 너무 정신없다보니 블로그에 약간 소홀했었는데요😭',
+    body2: '오픈관련 포스팅에 앞서 지난 주말 주문해주셨던 웨딩케이크 포스팅을 먼저 올립니다😬 #웨딩케이크',
+    h2: { line1: '퍼플그린으로 완성된', line2: '심플한 2단 웨딩케이크' },
+    h2color: 'text-purple-600',
+    body3: '신부님께서 특별히 퍼플그린으로 해달라고 요청하셔서 퍼플위주로 작업한 심플한 2단 웨딩케이크입니다💓 금요일에 꽃집에가서 직접 골라온 싱싱한 꽃들!',
+    figureImage: '/images/duet-mini-cake.jpg',
+    body4: '열심히 작업중인 저 흐흐... 완성! 넘 이쁘죠? 포장도 까다로운 2단케이크지만 꼼꼼히 포장해서 결혼식장까지 배송 후 세팅까지 완료☺️',
+    body5: '결혼식장도 너무 이쁘고❣️ 신랑 신부도 너무 선남선녀였어요😍 결혼 넘넘 축하드리고 주문해주셔서 감사합니다😖',
+    body6: "'듀엣미니케이크'는 늘 신선한 재료와 최고급 생화를 사용합니다.",
+    body7: "✔️kakao ID. 듀엣미니\n✔️베이킹클래스.원데이클래스 진행중"
+  },
+  '2': {
+    category: 'KIDS',
+    title: { line1: '아이들에게 사랑받는', line2: '콩순이케이크👏' },
+    excerpt: '두돌을 맞은 꼬마아가씨를 위해 주문해주신 캐릭터케이크',
+    date: '2019. 05. 02',
+    author: '듀엣미니',
+    authorImg: '/BlogC.svg',
+    heroImage: '/images/duet-mini-kongsuni.jpg',
+    body1: '안녕하세요! 듀엣미니입니다:) 오늘은 캐릭터케이크를 소개해드려요🤩',
+    body2: '요즘 어린이들에게 인기짱인 콩순이! 두돌을 맞은 꼬마아가씨를 위해 주문해주신 캐릭터케이크인데요:) #콩순이케이크 #캐릭터케이크',
+    h2: { line1: '핑쿠상자에 포장돼서', line2: '떠나는 케이크🎂' },
+    h2color: 'text-pink-500',
+    body3: '케이크를 완성하고 핑쿠상자에 포장돼서 떠나는 케이크🎂',
+    figureImage: '/images/duet-mini-kongsuni.jpg',
+    body4: '후기까지 보내주신 💓',
+    body5: '넘 귀여운 애기 ㅎㅎ 엄청 좋아했다고 하니 뿌듯😬 주문해주셔서 감사합니당👏😍',
+    body6: "'듀엣미니케이크'는 늘 신선한 재료와 최고급 생화를 사용합니다.",
+    body7: "✔️kakao ID. 듀엣미니\n✔️010.8632.0944\n✔️베이킹클래스.원데이클래스 진행중"
+  }
+};
+
 export default async function ArticlePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
+  const data = MOCK_ARTICLE_DATA[id] || MOCK_ARTICLE_DATA['1'];
 
   return (
     <div className="min-h-screen bg-[#fcfcfc] text-black">
@@ -69,8 +111,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
         {/* Left Fixed Image */}
         <div className="w-full lg:w-1/2 h-[50vh] lg:h-screen lg:sticky top-0 relative shrink-0 z-0 bg-black overflow-hidden">
           <Image
-            src={getImagePath("/images/duet-mini-cake.jpg")}
-            alt="Duet Mini Wedding Cake"
+            src={getImagePath(data.heroImage)}
+            alt={data.title.line1}
             fill
             className="object-cover opacity-90"
             priority
@@ -83,68 +125,69 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
           {/* Header Block (Takes full viewport height to match split view) */}
           <div className="w-full relative flex flex-col justify-center px-8 lg:px-16 xl:px-24 min-h-[50vh] lg:min-h-screen pb-16 pt-32 lg:pt-0">
             <div className="text-sm font-bold tracking-widest text-black mb-6 uppercase">
-              WEDDING
+              {data.category}
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-bold leading-[1.3] tracking-tight text-black mb-8 break-keep">
-              <span className="border-b-[5px] border-black pb-1 leading-[1.5]">결혼식의 퀄리티를</span><br className="hidden md:block" />
-              <span className="border-b-[5px] border-black pb-1 leading-[1.5] mt-4 md:mt-0 inline-block">높여주는 예쁜 웨딩케이크💙</span>
+              <span className="border-b-[5px] border-black pb-1 leading-[1.5]">{data.title.line1}</span><br className="hidden md:block" />
+              <span className="border-b-[5px] border-black pb-1 leading-[1.5] mt-4 md:mt-0 inline-block">{data.title.line2}</span>
             </h1>
 
             <p className="text-[16px] font-bold text-black mb-12 lg:mb-16">
-              퍼플위주로 작업한 심플한 2단 웨딩케이크
+              {data.excerpt}
             </p>
 
             <div className="text-[13px] font-bold text-black">
-              2019. 05. 08
+              {data.date}
             </div>
 
             {/* Author Badge Pinned Bottom Right of this header block */}
             <div className="absolute bottom-8 right-8 lg:bottom-16 lg:right-16 flex flex-col items-center">
               <div className="w-12 h-12 rounded-full overflow-hidden mb-2 border border-black/10 shadow-sm flex items-center justify-center bg-white">
-                <Image src={getImagePath("/BlogC.svg")} alt="듀엣미니" width={32} height={32} className="object-contain" />
+                <Image src={getImagePath(data.authorImg)} alt={data.author} width={32} height={32} className="object-contain" />
               </div>
-              <span className="text-[12px] font-bold text-black">듀엣미니</span>
+              <span className="text-[12px] font-bold text-black">{data.author}</span>
             </div>
           </div>
 
           {/* Body Content */}
           <div className="px-8 lg:px-16 xl:px-24 pb-16 text-black text-[15px] leading-[1.6] tracking-tight break-keep">
             <p className="mb-8">
-              안녕하세요:) 듀엣미니입니다! 가게오픈하느라 신경쓸게 한두가지가 아니어서 너무 정신없다보니 블로그에 약간 소홀했었는데요😭
+              {data.body1}
             </p>
 
             <p className="mb-12">
-              오픈관련 포스팅에 앞서 지난 주말 주문해주셨던 웨딩케이크 포스팅을 먼저 올립니다😬 #웨딩케이크
+              {data.body2}
             </p>
 
             <div className="my-16 flex justify-center border-y border-black py-8">
-              <h2 className="text-2xl font-bold text-center text-purple-600 italic">
-                퍼플그린으로 완성된<br />
-                심플한 2단 웨딩케이크
+              <h2 className={`text-2xl font-bold text-center ${data.h2color} italic`}>
+                {data.h2.line1}<br />
+                {data.h2.line2}
               </h2>
             </div>
             
             <p className="mb-8">
-              신부님께서 특별히 퍼플그린으로 해달라고 요청하셔서 퍼플위주로 작업한 심플한 2단 웨딩케이크입니다💓 금요일에 꽃집에가서 직접 골라온 싱싱한 꽃들!
+              {data.body3}
             </p>
 
             <figure className="mb-12 relative w-full bg-zinc-100 rounded-lg overflow-hidden border border-zinc-200 shadow-sm">
-              <Image src={getImagePath("/images/duet-mini-cake.jpg")} alt="Duet Mini Wedding Cake" width={800} height={600} className="w-full h-auto object-contain" />
+              <Image src={getImagePath(data.figureImage)} alt={data.title.line1} width={800} height={600} className="w-full h-auto object-contain" />
             </figure>
 
             <p className="mb-8">
-              열심히 작업중인 저 흐흐... 완성! 넘 이쁘죠? 포장도 까다로운 2단케이크지만 꼼꼼히 포장해서 결혼식장까지 배송 후 세팅까지 완료☺️
+              {data.body4}
             </p>
 
             <p className="mb-8">
-              결혼식장도 너무 이쁘고❣️ 신랑 신부도 너무 선남선녀였어요😍 결혼 넘넘 축하드리고 주문해주셔서 감사합니다😖
+              {data.body5}
             </p>
 
             <p className="mb-16">
-              '듀엣미니케이크'는 늘 신선한 재료와 최고급 생화를 사용합니다.<br/><br/>
-              ✔️kakao ID. 듀엣미니<br/>
-              ✔️베이킹클래스.원데이클래스 진행중
+              {data.body6}<br/><br/>
+              {data.body7.split('\n').map((line: string, i: number) => (
+                <span key={i}>{line}<br/></span>
+              ))}
             </p>
 
             {/* About Author Section inside the right panel */}

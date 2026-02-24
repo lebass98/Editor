@@ -4,14 +4,14 @@ import { getImagePath } from "@/utils/basePath";
 
 const articles = [
   {
-    id: 1,
-    title: "노트북이 들어가는 예쁜 가방을 찾아줘 7",
-    category: "STYLE",
-    image: "/images/article_modern_gadgets_1771911232807.png",
-    excerpt: "백팩, 숄더백, 토트백까지.",
-    date: "2026. 02. 19",
-    author: "손현성",
-    authorImg: "https://i.pravatar.cc/100?img=1"
+    id: 2,
+    title: "아이들에게 사랑받는 콩순이케이크👏",
+    category: "KIDS",
+    image: "/images/duet-mini-kongsuni.jpg",
+    excerpt: "두돌을 맞은 꼬마아가씨를 위해 주문해주신 캐릭터케이크",
+    date: "2019. 05. 02",
+    author: "듀엣미니",
+    authorImg: "/BlogC.svg"
   },
   {
     id: 2,
