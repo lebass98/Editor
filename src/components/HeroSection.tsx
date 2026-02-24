@@ -53,10 +53,10 @@ export default function HeroSection({ index = 0 }: { index?: number }) {
             {data.date}
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-bold italic mb-1 border border-white/20 shadow-sm">
-              edit
+            <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-bold italic mb-1 border border-white/20 shadow-sm text-[10px]">
+              BlogChannel
             </div>
-            <span className="text-[10px] font-bold">디에디트</span>
+            <span className="text-[10px] font-bold">BlogChannel</span>
           </div>
         </div>
       </div>

@@ -34,7 +34,7 @@ const mockArticles = [
     image: "/images/article_modern_gadgets_1771911232807.png",
     excerpt: "투명구 티셔츠부터 도깨비 방망이까지",
     date: "2026. 01. 15",
-    author: "디에디트",
+    author: "BlogChannel",
     authorImg: "logo"
   },
   {
@@ -120,8 +120,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                   <span className="text-[11px] font-medium text-zinc-500">{article.date}</span>
                   <div className="flex flex-col items-center">
                     {article.authorImg === "logo" ? (
-                      <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold italic mb-1 shrink-0 text-[8px] border shadow-sm">
-                        edit
+                      <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold italic mb-1 shrink-0 text-[7px] border shadow-sm tracking-tighter">
+                        BlogChannel
                       </div>
                     ) : (
                       <div className="w-8 h-8 rounded-full overflow-hidden mb-1 shrink-0 border border-black/10 shadow-sm">

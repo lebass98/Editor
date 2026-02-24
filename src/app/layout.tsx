@@ -19,8 +19,8 @@ const pretendardGov = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "디에디트 - 사는 재미가 없으면, 사는 재미라도",
-  description: "The Edit Clone built with Next.js and Tailwind CSS",
+  title: "BlogChannel - 사는 재미가 없으면, 사는 재미라도",
+  description: "BlogChannel Clone built with Next.js and Tailwind CSS",
 };
 
 export default function RootLayout({

@@ -19,7 +19,7 @@ const articles = [
     image: "/images/article_workspace_coffee_1771911209733.png",
     excerpt: "스투시 발렌타인데이와 원피스 유자얼음의 섬",
     date: "2026. 02. 13",
-    author: "디에디트",
+    author: "BlogChannel",
     authorImg: "logo"
   },
   {
@@ -59,7 +59,7 @@ const articles = [
     image: "/images/article_workspace_coffee_1771911209733.png",
     excerpt: "턴테이블과 스파오 조사병단 망토",
     date: "2026. 02. 06",
-    author: "디에디트",
+    author: "BlogChannel",
     authorImg: "logo"
   }
 ];
@@ -101,8 +101,8 @@ export default function ArticleGrid({ theme = 'lime', offset = 0 }: { theme?: 'l
           <span className="text-[13px] font-medium">{article.date}</span>
           <div className="flex flex-col items-center">
             {article.authorImg === "logo" ? (
-              <div className={`w-9 h-9 rounded-full ${theme === 'black' ? 'bg-white text-black' : 'bg-black text-white'} flex items-center justify-center font-bold italic mb-1 shrink-0 text-[9px] border shadow-sm`}>
-                edit
+              <div className={`w-9 h-9 rounded-full ${theme === 'black' ? 'bg-white text-black' : 'bg-black text-white'} flex items-center justify-center font-bold italic mb-1 shrink-0 text-[8px] border shadow-sm`}>
+                BlogChannel
               </div>
             ) : (
               <div className="w-9 h-9 rounded-full overflow-hidden mb-1 shrink-0 border border-black/10 shadow-sm">

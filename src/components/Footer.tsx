@@ -26,7 +26,7 @@ export default function Footer() {
 
         <Link href="/" className="mb-8">
           <span className="text-5xl md:text-6xl font-bold tracking-tighter italic">
-            the edit
+            BlogChannel
           </span>
         </Link>
         
@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
 
         <div className="text-[10px] md:text-xs text-zinc-500 font-medium tracking-tight uppercase">
-          서울시 강남구 도산대로94길 19 진영빌딩 2층 ©THE EDIT. ALL RIGHTS RESERVED.
+          서울시 강남구 도산대로94길 19 진영빌딩 2층 ©BlogChannel. ALL RIGHTS RESERVED.
         </div>
 
         <button 

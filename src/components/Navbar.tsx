@@ -17,7 +17,7 @@ export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" })
           {/* Logo - Pinned Top Left */}
           <Link href="/" className="pointer-events-auto">
             <span className={`text-3xl font-bold tracking-tighter ${textColor} drop-shadow-sm sm:text-4xl italic`}>
-              the edit
+              BlogChannel
             </span>
           </Link>
 

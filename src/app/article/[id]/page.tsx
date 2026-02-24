@@ -66,7 +66,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
             </p>
 
             <p className="text-zinc-700 leading-relaxed tracking-tight mt-6">
-              디에디트에서는 그동안 유출된 도면과 특허 자료를 바탕으로 직접 3D 프린터를 이용해 실제 크기의 목업(Mock-up)을 제작해보았습니다. 손에 쥐었을 때의 첫인상은 매우 묵직하고 단단했습니다. 기존 아이폰 15 프로 맥스의 티타늄 프레임 디자인 언어를 그대로 차용하면서도, 힌지 부분의 두께를 최소화하여 그립감을 크게 향상시킨 것이 특징입니다.
+              BlogChannel에서는 그동안 유출된 도면과 특허 자료를 바탕으로 직접 3D 프린터를 이용해 실제 크기의 목업(Mock-up)을 제작해보았습니다. 손에 쥐었을 때의 첫인상은 매우 묵직하고 단단했습니다. 기존 아이폰 15 프로 맥스의 티타늄 프레임 디자인 언어를 그대로 차용하면서도, 힌지 부분의 두께를 최소화하여 그립감을 크게 향상시킨 것이 특징입니다.
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold mt-16 mb-6 text-black tracking-tight">놀라운 두께와 힌지 메커니즘</h2>
