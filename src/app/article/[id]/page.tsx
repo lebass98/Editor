@@ -69,8 +69,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
         {/* Left Fixed Image */}
         <div className="w-full lg:w-1/2 h-[50vh] lg:h-screen lg:sticky top-0 relative shrink-0 z-0 bg-black overflow-hidden">
           <Image
-            src={getImagePath("/images/hero_lifestyle_tech_magazine_1771911195246.png")}
-            alt="Hero Left Image"
+            src={getImagePath("/images/duet-mini-cake.jpg")}
+            alt="Duet Mini Wedding Cake"
             fill
             className="object-cover opacity-90"
             priority
@@ -83,73 +83,81 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
           {/* Header Block (Takes full viewport height to match split view) */}
           <div className="w-full relative flex flex-col justify-center px-8 lg:px-16 xl:px-24 min-h-[50vh] lg:min-h-screen pb-16 pt-32 lg:pt-0">
             <div className="text-sm font-bold tracking-widest text-black mb-6 uppercase">
-              TECH
+              WEDDING
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-bold leading-[1.3] tracking-tight text-black mb-8 break-keep">
-              <span className="border-b-[5px] border-black pb-1 leading-[1.5]">아이폰 폴드는 정말</span><br className="hidden md:block" />
-              <span className="border-b-[5px] border-black pb-1 leading-[1.5] mt-4 md:mt-0 inline-block">이렇게 나올까?</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-bold leading-[1.3] tracking-tight text-black mb-8 break-keep">
+              <span className="border-b-[5px] border-black pb-1 leading-[1.5]">결혼식의 퀄리티를</span><br className="hidden md:block" />
+              <span className="border-b-[5px] border-black pb-1 leading-[1.5] mt-4 md:mt-0 inline-block">높여주는 예쁜 웨딩케이크💙</span>
             </h1>
 
             <p className="text-[16px] font-bold text-black mb-12 lg:mb-16">
-              3D 프린터로 목업을 만들어봤다
+              퍼플위주로 작업한 심플한 2단 웨딩케이크
             </p>
 
             <div className="text-[13px] font-bold text-black">
-              2026. 01. 28
+              2019. 05. 08
             </div>
 
             {/* Author Badge Pinned Bottom Right of this header block */}
             <div className="absolute bottom-8 right-8 lg:bottom-16 lg:right-16 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full overflow-hidden mb-2 border border-black/10 shadow-sm">
-                <Image src={getImagePath("https://i.pravatar.cc/100?img=9")} alt="이주형" width={48} height={48} className="object-cover" />
+              <div className="w-12 h-12 rounded-full overflow-hidden mb-2 border border-black/10 shadow-sm flex items-center justify-center bg-white">
+                <Image src={getImagePath("/BlogC.svg")} alt="듀엣미니" width={32} height={32} className="object-contain" />
               </div>
-              <span className="text-[12px] font-bold text-black">이주형</span>
+              <span className="text-[12px] font-bold text-black">듀엣미니</span>
             </div>
           </div>
 
           {/* Body Content */}
           <div className="px-8 lg:px-16 xl:px-24 pb-16 text-black text-[15px] leading-[1.6] tracking-tight break-keep">
             <p className="mb-8">
-              안녕하세요, 오랜 아이폰 유져 이주형입니다. 올해 개인적으로 가장 큰 기대를 하고 있는 제품이 바로 폴더블 아이폰(가제 '아이폰 폴드')입니다. 개인적으로 폴더블에 늘 관심이 있었지만, 애플이 쳐둔 울타리 밖을 나가는 걸 심히 귀찮아하는 자로서 200만 원 넘는 갤럭시 폴드를 구매해 잘 활용할 수 있다는 자신이 없었거든요.
+              안녕하세요:) 듀엣미니입니다! 가게오픈하느라 신경쓸게 한두가지가 아니어서 너무 정신없다보니 블로그에 약간 소홀했었는데요😭
             </p>
 
             <p className="mb-12">
-              그렇다면 이 아이폰 폴드는 어떻게 나오게 될까요? 지금까지의 루머를 토대로 3D 프린트한 목업도 만들어보면서 다양한 방면에서 예상해 보았습니다.
+              오픈관련 포스팅에 앞서 지난 주말 주문해주셨던 웨딩케이크 포스팅을 먼저 올립니다😬 #웨딩케이크
             </p>
 
             <div className="my-16 flex justify-center border-y border-black py-8">
-              <h2 className="text-2xl font-bold text-center text-orange-500 italic">
-                아이폰 폴드의 필수 조건<br />
-                주름 없는 폴더블 디스플레이
+              <h2 className="text-2xl font-bold text-center text-purple-600 italic">
+                퍼플그린으로 완성된<br />
+                심플한 2단 웨딩케이크
               </h2>
             </div>
+            
+            <p className="mb-8">
+              신부님께서 특별히 퍼플그린으로 해달라고 요청하셔서 퍼플위주로 작업한 심플한 2단 웨딩케이크입니다💓 금요일에 꽃집에가서 직접 골라온 싱싱한 꽃들!
+            </p>
 
             <figure className="mb-12 relative w-full bg-zinc-100 rounded-lg overflow-hidden border border-zinc-200 shadow-sm">
-              <Image src={getImagePath("/images/article_modern_gadgets_1771911232807.png")} alt="Folding Mechanism Mockup" width={800} height={600} className="w-full h-auto object-contain" />
+              <Image src={getImagePath("/images/duet-mini-cake.jpg")} alt="Duet Mini Wedding Cake" width={800} height={600} className="w-full h-auto object-contain" />
             </figure>
 
             <p className="mb-8">
-              많은 루머에 따르면, 아이폰 폴드가 여태껏 출시하지 않은 가장 큰 이유는 바로 폴더블 디스플레이의 주름입니다. 우리가 모두 폴더블 폰의 주름에 대해 어떻게 생각하는지와는 별개로, 애플은 아이폰 폴드가 출시되려면 이 주름이 없어져야만 한다는 입장을 내부적으로 고수해왔다는 이야기가 계속해서 들려왔거든요.
+              열심히 작업중인 저 흐흐... 완성! 넘 이쁘죠? 포장도 까다로운 2단케이크지만 꼼꼼히 포장해서 결혼식장까지 배송 후 세팅까지 완료☺️
             </p>
 
             <p className="mb-8">
-              주름이 문제가 될 부분은 크게 두 가지입니다. 바로 눈에 보이는 것과 화면을 만질 때 주름이 느껴진다는 것이죠. 작년에 출시한 갤럭시 Z 폴드 7도 첫 갤럭시 폴드와 비교하면 주름이 획기적으로 줄어들긴 했지만, 여전히 주름은 적게나마 있었습니다. 제가 갤럭시 Z 폴드 7이나 얼마 전 출시한 Z 트라이폴드를 만져봤을 때, 육안의 주름은 확실히 눈에 띄지 않을 정도로 줄었지만 여전히 손으로 화면을 만졌을 때 느껴졌으니까요.
+              결혼식장도 너무 이쁘고❣️ 신랑 신부도 너무 선남선녀였어요😍 결혼 넘넘 축하드리고 주문해주셔서 감사합니다😖
             </p>
 
             <p className="mb-16">
-              하지만 올해 CES에서 삼성디스플레이가 주름이 없는 폴더블 OLED 시제품을 선보였죠. 기존의 폴더블 화면에서 주름이 발생한 것은 여러 번 접고 펼 때 특정 라인에만 압력이 가해지면서 주름이 깊어지는 것인데, 주름 없는 폴더블 OLED는 경첩 부분에 레이저로 조그만 홈을 여럿 파내어 응력을 완화하는 구조를 띄고 있습니다.
+              '듀엣미니케이크'는 늘 신선한 재료와 최고급 생화를 사용합니다.<br/><br/>
+              ✔️kakao ID. 듀엣미니<br/>
+              ✔️베이킹클래스.원데이클래스 진행중
             </p>
 
             {/* About Author Section inside the right panel */}
             <div className="mt-20 pt-10 border-t border-zinc-200">
               <div className="text-[13px] font-bold mb-6 uppercase tracking-wider">ABOUT AUTHOR</div>
               <div className="flex items-start gap-5">
-                <Image src={getImagePath("https://i.pravatar.cc/100?img=9")} alt="이주형" width={64} height={64} className="rounded-full w-16 h-16 object-cover border border-zinc-200 shrink-0" />
+                <div className="w-16 h-16 rounded-full border border-zinc-200 shrink-0 flex items-center justify-center overflow-hidden bg-white">
+                  <Image src={getImagePath("/BlogC.svg")} alt="듀엣미니" width={40} height={40} className="object-contain" />
+                </div>
                 <div className="flex flex-col">
-                  <div className="font-bold text-[15px] mb-2 text-black">이주형</div>
+                  <div className="font-bold text-[15px] mb-2 text-black">듀엣미니</div>
                   <div className="text-[13px] text-zinc-600 leading-relaxed font-medium break-keep">
-                    테크에 대한 기사만 10년 넘게 쓴 글쟁이. 사실 그 외에도 관심있는 게 너무 많아서 탈입니다.
+                    수제 케이크 전문점. 늘 신선한 재료와 최고급 생화를 사용하여 소중한 날의 퀄리티를 한 층 더 높여드립니다.
                   </div>
                 </div>
               </div>

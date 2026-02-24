@@ -6,11 +6,11 @@ const heroes = [
 // ... (I'll just replace the component block to be safe)
   {
     id: 1,
-    image: "/images/hero_lifestyle_tech_magazine_1771911195246.png",
-    category: "LIFE",
-    title: "[새로나왔] 2월 4주차 신상 리스트",
-    excerpt: "이케아 고양이 수납기부터 당근 녹음기 펜까지",
-    date: "2026. 02. 23"
+    image: "/images/duet-mini-cake.jpg",
+    category: "WEDDING",
+    title: "결혼식의 퀄리티를 높여주는 예쁜 웨딩케이크💙",
+    excerpt: "퍼플위주로 작업한 심플한 2단 웨딩케이크",
+    date: "2019. 05. 08"
   },
   {
     id: 2,
