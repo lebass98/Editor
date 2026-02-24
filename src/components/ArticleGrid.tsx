@@ -45,13 +45,13 @@ const articles = [
   },
   {
     id: 5,
-    title: "안성재가 이름을 허락한 치킨, 푸라닭 마요피뇨",
-    category: "EAT",
-    image: "/images/article_minimalist_desk_1771911248411.png",
-    excerpt: "생존? 탈락? 보류?",
-    date: "2026. 02. 10",
-    author: "김봉주",
-    authorImg: "https://i.pravatar.cc/100?img=7"
+    title: "드디어 먹어본 제주김만복◡̈",
+    category: "TRAVEL",
+    image: "/images/duet-mini-jeju.jpg",
+    excerpt: "이호테우 해변에서 맛보는 포송포송한 계란 김밥",
+    date: "2019. 04. 11",
+    author: "듀엣미니",
+    authorImg: "/BlogC.svg"
   },
   {
     id: 6,
