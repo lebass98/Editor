@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, Search, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,17 +65,6 @@ export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" })
             </button>
           </div>
 
-          {/* Search Bar */}
-          <div className="relative mb-12">
-            <div className="absolute inset-y-0 left-0 pl-1 flex items-center pointer-events-none">
-              <Search className="h-5 w-5 text-zinc-900" />
-            </div>
-            <input 
-              type="text" 
-              className="block w-full border-b-2 border-zinc-900 bg-transparent py-3 pl-10 pr-3 text-lg font-bold text-zinc-900 placeholder:text-zinc-400 focus:outline-none" 
-              placeholder="검색어 입력" 
-            />
-          </div>
 
           {/* Main Links */}
           <nav className="flex flex-col gap-6 text-3xl font-bold mt-4 uppercase text-[#111]">
