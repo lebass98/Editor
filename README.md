@@ -2,22 +2,31 @@
 
 디에디트(https://the-edit.co.kr/) 매거진의 감각적인 UI와 50:50 좌우 분할 스플릿 레이아웃을 클론 코딩한 웹 애플리케이션 화면 구현 저장소입니다. 세련된 고대비 색상과 타이포그래피, 매끄러운 오버레이 메뉴, 그리고 지그재그 그리드 기반의 기사 레이아웃을 반응형으로 구성했습니다.
 
+- **GitHub Repository**: [https://github.com/lebass98/Editor](https://github.com/lebass98/Editor)
+- **Live Demo**: [https://lebass98.github.io/Editor/](https://lebass98.github.io/Editor/) (예정)
+
 ## 🚀 기술 스택 (Tech Stack)
 
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
+- **Framework**: Next.js 15+ (App Router)
+- **Library**: React 19
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS v4
 - **Icons**: Lucide React
-- **Typography**: Pretendard GOV (로컬 폰트)
+- **Typography**: Pretendard GOV / Outfit (Google Fonts)
 
 ## 📌 주요 레이아웃 및 기능
 
 ### 1. 전면 개편된 50:50 스플릿 레이아웃 (Split Screen Layout)
 - 메인 홈페이지(`page.tsx`)는 스크롤마다 좌우 영역의 역할이 서로 뒤바뀌는 3개의 독특한 섹션으로 구성됩니다.
-  - **섹션 1 (Lime)**: [좌] 고정된(Sticky) 히어로 썸네일 / [우] 2단 라임색 스크롤 배너
-  - **섹션 2 (Ivory)**: [좌] 흰색 스크롤 배너 / [우] 고정된(Sticky) 히어로 썸네일
-  - **섹션 3 (Black)**: [좌] 고정된(Sticky) 히어로 썸네일 / [우] 2단 검은색 스크롤 배너
+  - **섹션 1 (Black/White)**: [좌] 고정된(Sticky) 히어로 섹션 / [우] 2단 스크롤 아티클 그리드
+  - **섹션 2 (Ivory)**: [좌] 2단 스크롤 아티클 그리드 / [우] 고정된(Sticky) 히어로 섹션
+  - **섹션 3 (Black/White)**: [좌] 고정된(Sticky) 히어로 섹션 / [우] 2단 스크롤 아티클 그리드
 - 좌우 대조의 직관적이고 세련된 매거진 뷰를 제공합니다.
+
+### 2. 프리미엄 디자인 및 UI/UX 디테일
+- **Magazine Aesthetic**: 불필요한 기술적 정보(ID 등)를 UI에서 숨기고(주석 처리), 오직 콘텐츠에만 집중할 수 있는 깔끔한 메거진 레이아웃을 지향합니다.
+- **Glassmorphism**: 내비게이션 및 배지 요소에 유리 질감의 효과를 적용하여 고급스러운 느낌을 더했습니다.
+- **Micro-animations**: 아티클 카드 호버 시 부드러운 스케일링(Scale-105)과 그라데이션 오버레이 효과를 적용했습니다.
 
 ### 2. 전체 화면 햄버거 메뉴 (Slide-in Menu Overlay)
 - 우측 상단 햄버거 메뉴를 클릭 시 우측 50%를 차지하는 전체 화면 슬라이드 오버레이가 등장.
@@ -69,8 +78,9 @@ src/
     └── Footer.tsx         # Bottom-pinned 푸터 컴포넌트
 ```
 
-## 🛠 글꼴 정보 적용 규칙
-- 가장 굵은 글꼴 스타일을 위해 시스템 전체의 `--font-weight-black`이 `--font-weight-bold`(700)로 수정 적용되어 있습니다. 
-
+## 🛠 주요 데이터 및 기술 사양
+- **데이터 관리**: 모든 기사 정보는 `src/data/articles.ts`에서 통합 관리되며, 상세 페이지는 이를 기반으로 동적으로 렌더링됩니다.
+- **이미지 최적화**: Next.js `Image` 컴포넌트를 사용하여 LCP(Largest Contentful Paint)를 최적화했으며, 50/50 레이아웃에 최적화된 `object-cover` 속성을 사용합니다.
+- **글꼴 정보**: 프리미엄 매거진 룩을 위해 굵은 폰트(Black) 가중치를 조정하여 가독성과 심미성을 확보했습니다.
 ---
 © THE EDIT CLONE PROJECT.
