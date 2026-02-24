@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, Search, X } from "lucide-react";
 
 export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" }) {
@@ -16,9 +17,14 @@ export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" })
         <div className="flex items-center justify-between w-full">
           {/* Logo - Pinned Top Left */}
           <Link href="/" className="pointer-events-auto">
-            <span className={`text-3xl font-bold tracking-tighter ${textColor} drop-shadow-sm sm:text-4xl italic`}>
-              BlogChannel
-            </span>
+            <Image 
+              src="/BlogChannel.svg" 
+              alt="BlogChannel" 
+              width={200} 
+              height={40} 
+              className={`w-auto h-8 sm:h-9 object-contain drop-shadow-sm ${isLight ? "invert" : ""}`} 
+              priority 
+            />
           </Link>
 
           {/* Menu Toggle - Pinned Top Right */}

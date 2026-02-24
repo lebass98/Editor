@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronUp } from "lucide-react";
 
 export default function Footer() {
@@ -25,9 +26,13 @@ export default function Footer() {
         </div>
 
         <Link href="/" className="mb-8">
-          <span className="text-5xl md:text-6xl font-bold tracking-tighter italic">
-            BlogChannel
-          </span>
+          <Image 
+            src="/BlogChannel.svg" 
+            alt="BlogChannel" 
+            width={280} 
+            height={55} 
+            className="w-auto h-12 md:h-16 object-contain" 
+          />
         </Link>
         
         <div className="space-y-1.5 text-[11px] md:text-sm text-zinc-400 font-medium tracking-tight mb-8">
