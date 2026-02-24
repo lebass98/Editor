@@ -39,6 +39,16 @@ export const heroArticles: Article[] = [
         date: "2026. 02. 05",
         author: "최재원",
         authorImg: "logo"
+    },
+    {
+        id: 16,
+        image: "/images/hero_lifestyle_tech_magazine_1771911195246.png",
+        category: "TECH",
+        title: "CES 2026에서 만난 미래 기술 돋보기",
+        excerpt: "우리의 일상을 바꿀 혁신적인 가젯들",
+        date: "2026. 02. 26",
+        author: "BlogChannel",
+        authorImg: "logo"
     }
 ];
 
@@ -165,5 +175,46 @@ export const gridArticles: Article[] = [
         date: "2026. 02. 10",
         author: "그린썸",
         authorImg: "https://i.pravatar.cc/100?img=7"
+    },
+    // Section 4
+    {
+        id: 17,
+        title: "2026 봄/여름 트렌드 컬러 가이드",
+        category: "STYLE",
+        image: "/images/hero_lifestyle_tech_magazine_1771911195246.png",
+        excerpt: "올해의 컬러로 꾸며보는 나만의 공간과 스타일",
+        date: "2026. 02. 25",
+        author: "이지은",
+        authorImg: "https://i.pravatar.cc/100?img=1"
+    },
+    {
+        id: 18,
+        title: "나만 알고 싶은 도쿄의 조용한 골목들",
+        category: "TRAVEL",
+        image: "/images/article_workspace_coffee_1771911209733.png",
+        excerpt: "번잡함을 벗어나 만나는 도쿄의 진정한 매력",
+        date: "2026. 02. 23",
+        author: "김민수",
+        authorImg: "https://i.pravatar.cc/100?img=2"
+    },
+    {
+        id: 19,
+        title: "비건 입문자를 위한 제철 채소 요리 팁",
+        category: "EAT",
+        image: "/images/article_minimalist_desk_1771911248411.png",
+        excerpt: "몸도 마음도 가벼워지는 맛있는 채식 생활",
+        date: "2026. 02. 21",
+        author: "정다운",
+        authorImg: "https://i.pravatar.cc/100?img=4"
+    },
+    {
+        id: 20,
+        title: "주말의 생산성을 높이는 5가지 모닝 루틴",
+        category: "LIFE",
+        image: "/images/article_modern_gadgets_1771911232807.png",
+        excerpt: "더 나은 월요일을 준비하는 작은 습관의 힘",
+        date: "2026. 02. 19",
+        author: "최재원",
+        authorImg: "logo"
     }
 ];

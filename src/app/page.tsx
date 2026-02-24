@@ -42,6 +42,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SECTION 4: Grid Left (Ivory), Hero Right */}
+      <section className="flex flex-col lg:flex-row w-full bg-[#fcfcfc] text-black">
+        <div className="w-full lg:w-1/2 bg-[#fcfcfc] text-black relative z-10 min-h-screen order-2 lg:order-1">
+          <ArticleGrid theme="ivory" articles={gridArticles.slice(12, 16)} />
+        </div>
+
+        <div className="w-full lg:w-1/2 h-[50vh] lg:h-screen lg:sticky top-0 relative shrink-0 z-0 order-1 lg:order-2">
+          <HeroSection index={3} />
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

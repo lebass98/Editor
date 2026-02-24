@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 // Generate static params for categories
 export function generateStaticParams() {
-  return Array.from({ length: 15 }, (_, i) => ({ id: (i + 1).toString() }));
+  return Array.from({ length: 20 }, (_, i) => ({ id: (i + 1).toString() }));
 }
 
 
@@ -167,6 +167,101 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body5: '만복이네 김밥(6,500원), 전복컵밥(7,500원), 직화구이통전복 주먹밥(5,500원), 오징어무침(4,500원) 메뉴 구성도 좋구요. 특히 오징어무침은 꼭 추천드려요!',
     body6: "그럼이만 뿅💙",
     body7: "#제주맛집 #제주김만복 #김만복김밥 #전복컵밥 #오징어무침 #제주도여행"
+  },
+  '16': {
+    category: 'TECH',
+    title: { line1: 'CES 2026에서 만난', line2: '미래 기술 돋보기' },
+    excerpt: '우리의 일상을 바꿀 혁신적인 가젯들',
+    date: '2026. 02. 26',
+    author: 'BlogChannel',
+    authorImg: 'logo',
+    heroImage: '/images/hero_lifestyle_tech_magazine_1771911195246.png',
+    body1: '올해 CES에서도 정말 눈이 돌아갈 만큼 신기한 제품들이 많이 쏟아져 나왔습니다.',
+    body2: '특히 AI와 웨어러블의 결합이 돋보였던 이번 전시회에서 가장 주목받은 5가지 기술을 정리해 드립니다. #CES2026 #미래기술',
+    h2: { line1: '기술이 우리 삶에 스며드는', line2: '가장 자연스러운 방식' },
+    h2color: 'text-blue-600',
+    body3: '단순히 스펙을 자랑하는 단계를 넘어, 이제는 어떻게 사용자의 의도를 먼저 읽고 도움을 줄 것인가에 집중하고 있습니다.',
+    figureImage: '/images/article_modern_gadgets_1771911232807.png',
+    body4: '로봇 집사부터 투명 디스플레이까지, 상상 속의 미래가 거실 안으로 들어온 느낌입니다.',
+    body5: '혁신은 멈추지 않습니다. 내년에는 또 어떤 변화가 찾아올까요?',
+    body6: "기술로 읽는 세상, 블로그 채널입니다.",
+    body7: "#테크리뷰 #CES #혁신기술 #가젯리스트"
+  },
+  '17': {
+    category: 'STYLE',
+    title: { line1: '2026 봄/여름', line2: '트렌드 컬러 가이드' },
+    excerpt: '올해의 컬러로 꾸며보는 나만의 공간과 스타일',
+    date: '2026. 02. 25',
+    author: '이지은',
+    authorImg: 'https://i.pravatar.cc/100?img=1',
+    heroImage: '/images/hero_lifestyle_tech_magazine_1771911195246.png',
+    body1: '기분 좋은 봄바람과 함께 새로운 계절의 컬러들이 찾아왔습니다.',
+    body2: '이번 시즌 주목해야 할 메인 컬러는 바로 차분하면서도 생기 있는 팔레트입니다. #트렌드컬러 #SS컬러',
+    h2: { line1: '봄의 생기를 담은', line2: '완벽한 스타일링' },
+    h2color: 'text-pink-600',
+    body3: '단순히 옷을 고르는 것을 넘어, 나를 표현하는 가장 직관적인 수단으로서의 컬러를 제안합니다.',
+    figureImage: '/images/hero_lifestyle_tech_magazine_1771911195246.png',
+    body4: '일상을 환하게 밝혀줄 나만의 컬러를 찾아보세요.',
+    body5: '작은 소품 하나로도 분위기를 완전히 바꿀 수 있습니다.',
+    body6: "감각적인 하루를 제안하는 이지은입니다.",
+    body7: "#봄스타일링 #컬러가이드 #인테리어팁 #데일리룩"
+  },
+  '18': {
+    category: 'TRAVEL',
+    title: { line1: '나만 알고 싶은 도쿄의', line2: '조용한 골목들' },
+    excerpt: '번잡함을 벗어나 만나는 도쿄의 진정한 매력',
+    date: '2026. 02. 23',
+    author: '김민수',
+    authorImg: 'https://i.pravatar.cc/100?img=2',
+    heroImage: '/images/article_workspace_coffee_1771911209733.png',
+    body1: '시부야와 신주쿠만 알고 계셨나요? 도쿄에는 아직도 숨겨진 보물 같은 골목들이 많습니다.',
+    body2: '관광객으로 붐비는 곳을 피해 현지인들의 일상을 엿볼 수 있는 곳으로 떠나보세요. #도쿄여행 #숨은명소',
+    h2: { line1: '시간이 천천히 흐르는', line2: '골목 안 작은 카페' },
+    h2color: 'text-orange-500',
+    body3: '우연히 만난 작은 책방과 커피 향 가득한 카페에서 도쿄의 또 다른 얼굴을 발견합니다.',
+    figureImage: '/images/article_workspace_coffee_1771911209733.png',
+    body4: '지도를 잠시 내려놓고 발길 닿는 대로 걷는 즐거움을 느껴보세요.',
+    body5: '그 속에서 당신만의 도쿄 이야기를 만들어보길 바랍니다.',
+    body6: "여행의 기억을 기록하는 김민수입니다.",
+    body7: "#도쿄산책 #골목여행 #카페투어 #일본여행기"
+  },
+  '19': {
+    category: 'EAT',
+    title: { line1: '비건 입문자를 위한', line2: '제철 채소 요리 팁' },
+    excerpt: '몸도 마음도 가벼워지는 맛있는 채식 생활',
+    date: '2026. 02. 21',
+    author: '정다운',
+    authorImg: 'https://i.pravatar.cc/100?img=4',
+    heroImage: '/images/article_minimalist_desk_1771911248411.png',
+    body1: '채식이 어렵다는 편견은 이제 버리세요. 제철 채소만 잘 활용해도 충분히 맛있는 한 끼가 됩니다.',
+    body2: '영양 균형은 물론 맛까지 챙길 수 있는 간단한 비건 레시피를 공유합니다. #비건요리 #제철채소',
+    h2: { line1: '자연의 맛을 그대로', line2: '건강한 테이블' },
+    h2color: 'text-green-600',
+    body3: '원재료의 풍미를 살리는 조리법으로 채소 본연의 단맛과 아삭함을 즐겨보세요.',
+    figureImage: '/images/article_minimalist_desk_1771911248411.png',
+    body4: '매일 한 끼만이라도 나를 위한 건강한 선택을 해보는 건 어떨까요?',
+    body5: '몸의 변화를 직접 느껴보세요.',
+    body6: "맛있는 일상을 요리하는 정다운입니다.",
+    body7: "#비건레시피 #건강식단 #요리팁 #채식주의"
+  },
+  '20': {
+    category: 'LIFE',
+    title: { line1: '주말의 생산성을 높이는', line2: '5가지 모닝 루틴' },
+    excerpt: '더 나은 월요일을 준비하는 작은 습관의 힘',
+    date: '2026. 02. 19',
+    author: '최재원',
+    authorImg: 'logo',
+    heroImage: '/images/article_modern_gadgets_1771911232807.png',
+    body1: '꿀 같은 주말, 침대에서만 시간을 보내기엔 너무 아깝지 않나요?',
+    body2: '생산적이고 활기찬 주말을 만드는 아주 작은 습관들을 소개합니다. #모닝루틴 #자기계발',
+    h2: { line1: '어제보다 더 나은', line2: '오늘을 만드는 습관' },
+    h2color: 'text-indigo-600',
+    body3: '거창한 목표보다는 내가 지킬 수 있는 작은 정기적인 동작이 마음의 근육을 만듭니다.',
+    figureImage: '/images/article_modern_gadgets_1771911232807.png',
+    body4: '명상, 독서, 혹은 가벼운 스트레칭까지 나에게 맞는 루틴을 찾아보세요.',
+    body5: '습관이 인생을 만듭니다.',
+    body6: "성장을 기록하는 최재원입니다.",
+    body7: "#습관만들기 #생산성 #주말루틴 #자기관리"
   }
 };
 
