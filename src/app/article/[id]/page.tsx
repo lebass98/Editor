@@ -108,7 +108,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
           </div>
 
           {/* Body Content */}
-          <div className="px-8 lg:px-16 xl:px-24 pb-16 text-black text-[15px] leading-[2.2] tracking-tight break-keep">
+          <div className="px-8 lg:px-16 xl:px-24 pb-16 text-black text-[15px] leading-[1.6] tracking-tight break-keep">
             <p className="mb-8">
               안녕하세요, 오랜 아이폰 유져 이주형입니다. 올해 개인적으로 가장 큰 기대를 하고 있는 제품이 바로 폴더블 아이폰(가제 '아이폰 폴드')입니다. 개인적으로 폴더블에 늘 관심이 있었지만, 애플이 쳐둔 울타리 밖을 나가는 걸 심히 귀찮아하는 자로서 200만 원 넘는 갤럭시 폴드를 구매해 잘 활용할 수 있다는 자신이 없었거든요.
             </p>
