@@ -3,6 +3,7 @@ import Link from "next/link";
 
 const heroes = [
   {
+    id: 1,
     image: "/images/hero_lifestyle_tech_magazine_1771911195246.png",
     category: "LIFE",
     title: "[새로나왔] 2월 4주차 신상 리스트",
@@ -10,6 +11,7 @@ const heroes = [
     date: "2026. 02. 23"
   },
   {
+    id: 2,
     image: "/images/article_workspace_coffee_1771911209733.png",
     category: "CULTURE",
     title: "연휴가 타이밍, 독서 입문 책 5",
@@ -17,6 +19,7 @@ const heroes = [
     date: "2026. 02. 11"
   },
   {
+    id: 3,
     image: "/images/article_modern_gadgets_1771911232807.png",
     category: "TECH",
     title: "혁신을 이끄는 새로운 오디오 런칭",
@@ -29,7 +32,7 @@ export default function HeroSection({ index = 0 }: { index?: number }) {
   const data = heroes[index] || heroes[0];
 
   return (
-    <section className="relative w-full h-full overflow-hidden bg-black text-white group cursor-pointer block">
+    <Link href={`/article/${data.id}`} className="relative w-full h-full overflow-hidden bg-black text-white group cursor-pointer block">
       <Image
         src={data.image}
         alt={data.title}
@@ -60,6 +63,6 @@ export default function HeroSection({ index = 0 }: { index?: number }) {
           </div>
         </div>
       </div>
-    </section>
+    </Link>
   );
 }

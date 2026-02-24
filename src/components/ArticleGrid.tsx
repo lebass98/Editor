@@ -75,7 +75,7 @@ export default function ArticleGrid({ theme = 'lime', offset = 0 }: { theme?: 'l
   const subTextColor = theme === 'black' ? 'text-zinc-400' : 'text-zinc-900';
 
   const renderArticle = (article: typeof articles[0]) => (
-    <Link key={article.id} href="/" className="group flex flex-col h-full bg-transparent">
+    <Link key={article.id} href={`/article/${article.id}`} className="group flex flex-col h-full bg-transparent">
       <div className="relative overflow-hidden aspect-[4/5] object-cover bg-zinc-100 w-full mb-4">
         <Image
           src={article.image}
