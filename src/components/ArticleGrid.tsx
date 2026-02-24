@@ -14,14 +14,14 @@ const articles = [
     authorImg: "/BlogC.svg"
   },
   {
-    id: 2,
-    title: "[새로나왔] 2월 2주차 신상 리스트",
-    category: "LIFE",
-    image: "/images/article_workspace_coffee_1771911209733.png",
-    excerpt: "스투시 발렌타인데이와 원피스 유자얼음의 섬",
-    date: "2026. 02. 13",
-    author: "BlogChannel",
-    authorImg: "logo"
+    id: 3,
+    title: "생화와 과일이 듬뿍 올라간 하트생일케이크💓",
+    category: "BIRTHDAY",
+    image: "/images/duet-mini-heart-cake.jpg",
+    excerpt: "얼그레이 시트에 생화와 달달한 딸기가 안성맞춤인 하트케이크",
+    date: "2019. 04. 22",
+    author: "듀엣미니",
+    authorImg: "/BlogC.svg"
   },
   {
     id: 3,
