@@ -6,13 +6,9 @@ import Footer from "@/components/Footer";
 
 // Generate static params for categories
 export function generateStaticParams() {
-  return [
-    { id: '1' },
-    { id: '2' },
-    { id: '3' },
-    { id: '4' },
-  ];
+  return Array.from({ length: 15 }, (_, i) => ({ id: (i + 1).toString() }));
 }
+
 
 const mockRelated = [
   {
@@ -152,8 +148,28 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body5: '만복이네 김밥, 전복컵밥, 직화구이통전복 주먹밥, 오징어무침까지! 오징어무침은 꼭 두 개 사세요ㅠㅠ',
     body6: "그럼이만 뿅💙",
     body7: "#제주맛집 #제주김만복 #김만복김밥 #전복컵밥 #오징어무침 #제주도여행"
+  },
+  '6': {
+    category: 'TRAVEL',
+    title: { line1: '드디어 먹어본', line2: '제주김만복◡̈' },
+    excerpt: '공항 도착하자마자 달려간 제주 김만복! 이호테우 해변에서 맛보는 포송포송한 계란 김밥.',
+    date: '2019. 04. 11',
+    author: '듀엣미니',
+    authorImg: '/BlogC.svg',
+    heroImage: '/images/article_6_jeju.jpg',
+    body1: '안녕하세요! 듀엣미니입니다;) 여행후기에 이어 이제 맛집과 펜션 후기가 남았죠?',
+    body2: '공항에 3시쯤 도착해서 김만복 김밥을 포장해 이호테우 해변으로 갔어요! 본점은 휴무라 동문시장점을 이용했답니다. :)',
+    h2: { line1: '푸른 바다 앞에서 즐기는', line2: '만복이네 김밥과 전복컵밥' },
+    h2color: 'text-blue-400',
+    body3: '포송포송한 계란이 들어간 김밥, 정말 비주얼부터 맛까지 최고예요! 바다를 보며 먹으니 더 꿀맛이었답니다. 사진도 정말 잘 나와요 ㅎㅎ',
+    figureImage: '/images/article_6_jeju.jpg',
+    body4: '제주도 오면 꼭 들러야 할 맛집 인정! 가격대는 좀 있지만 바다 뷰와 함께라면 아깝지 않아요.',
+    body5: '만복이네 김밥(6,500원), 전복컵밥(7,500원), 직화구이통전복 주먹밥(5,500원), 오징어무침(4,500원) 메뉴 구성도 좋구요. 특히 오징어무침은 꼭 추천드려요!',
+    body6: "그럼이만 뿅💙",
+    body7: "#제주맛집 #제주김만복 #김만복김밥 #전복컵밥 #오징어무침 #제주도여행"
   }
 };
+
 
 export default async function ArticlePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -223,7 +239,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
                 {data.h2.line2}
               </h2>
             </div>
-            
+
             <p className="mb-8">
               {data.body3}
             </p>
@@ -241,9 +257,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
             </p>
 
             <p className="mb-16">
-              {data.body6}<br/><br/>
+              {data.body6}<br /><br />
               {data.body7.split('\n').map((line: string, i: number) => (
-                <span key={i}>{line}<br/></span>
+                <span key={i}>{line}<br /></span>
               ))}
             </p>
 

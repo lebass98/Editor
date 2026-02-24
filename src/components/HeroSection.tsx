@@ -1,37 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getImagePath } from "@/utils/basePath";
-
-const heroes = [
-// ... (I'll just replace the component block to be safe)
-  {
-    id: 1,
-    image: "/images/duet-mini-cake.jpg",
-    category: "WEDDING",
-    title: "결혼식의 퀄리티를 높여주는 예쁜 웨딩케이크💙",
-    excerpt: "퍼플위주로 작업한 심플한 2단 웨딩케이크",
-    date: "2019. 05. 08"
-  },
-  {
-    id: 2,
-    image: "/images/article_workspace_coffee_1771911209733.png",
-    category: "CULTURE",
-    title: "연휴가 타이밍, 독서 입문 책 5",
-    excerpt: "독서의 세계에 온 걸 환영해요",
-    date: "2026. 02. 11"
-  },
-  {
-    id: 3,
-    image: "/images/article_modern_gadgets_1771911232807.png",
-    category: "TECH",
-    title: "혁신을 이끄는 새로운 오디오 런칭",
-    excerpt: "미래 지향적인 디자인과 사운드의 결합",
-    date: "2026. 02. 05"
-  }
-];
+import { heroArticles } from "@/data/articles";
 
 export default function HeroSection({ index = 0 }: { index?: number }) {
-  const data = heroes[index] || heroes[0];
+  const data = heroArticles[index] || heroArticles[0];
 
   return (
     <Link href={`/article/${data.id}`} className="relative w-full h-full overflow-hidden bg-black text-white group cursor-pointer block">
@@ -42,6 +15,9 @@ export default function HeroSection({ index = 0 }: { index?: number }) {
         className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105 opacity-80"
         priority
       />
+      <div className="absolute top-6 left-6 bg-white/20 backdrop-blur-md text-white px-3 py-1 text-xs font-mono z-20 rounded-full border border-white/30">
+        ID: {data.id}
+      </div>
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
       <div className="absolute bottom-0 left-0 p-6 md:p-10 lg:p-12 w-full">
         <div className="mb-3 font-bold uppercase tracking-widest text-xs md:text-sm">
@@ -58,10 +34,16 @@ export default function HeroSection({ index = 0 }: { index?: number }) {
             {data.date}
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-bold italic mb-1 border border-white/20 shadow-sm text-[10px]">
-              BlogChannel
-            </div>
-            <span className="text-[10px] font-bold">BlogChannel</span>
+            {data.authorImg === "logo" ? (
+              <div className={`w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-bold italic mb-1 border border-white/20 shadow-sm text-[10px]`}>
+                BlogChannel
+              </div>
+            ) : (
+              <div className="w-10 h-10 rounded-full overflow-hidden mb-1 border border-white/20 shadow-sm">
+                <Image src={getImagePath(data.authorImg)} alt={data.author} width={40} height={40} className="object-cover" />
+              </div>
+            )}
+            <span className="text-[10px] font-bold">{data.author}</span>
           </div>
         </div>
       </div>
