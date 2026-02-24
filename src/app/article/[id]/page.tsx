@@ -124,8 +124,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
               </h2>
             </div>
             
-            <figure className="mb-12 relative w-full aspect-video bg-zinc-100 rounded-lg overflow-hidden border border-zinc-200 shadow-sm">
-               <Image src="/images/article_modern_gadgets_1771911232807.png" alt="Folding Mechanism Mockup" fill className="object-cover" />
+            <figure className="mb-12 relative w-full bg-zinc-100 rounded-lg overflow-hidden border border-zinc-200 shadow-sm">
+               <Image src="/images/article_modern_gadgets_1771911232807.png" alt="Folding Mechanism Mockup" width={800} height={600} className="w-full h-auto object-contain" />
             </figure>
 
             <p className="mb-8">
@@ -164,17 +164,17 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {mockRelated.map((article) => (
             <Link key={article.id} href={`/article/${article.id}`} className="group flex flex-col h-full bg-transparent">
-              <div className="relative overflow-hidden aspect-square object-cover bg-zinc-200 w-full mb-4">
+              <div className="relative overflow-hidden aspect-[4/5] object-cover bg-zinc-200 w-full mb-4 group-hover:bg-zinc-300 transition-colors">
                 <Image
                   src={article.image}
                   alt={article.title}
                   fill
                   className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-4 left-4 text-white font-bold text-sm uppercase tracking-widest drop-shadow-md z-10">
                   {article.category}
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
               </div>
               
               <div className="flex flex-col flex-1">
