@@ -19,8 +19,21 @@ const pretendardGov = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "BlogChannel - 사는 재미가 없으면, 사는 재미라도",
-  description: "BlogChannel Clone built with Next.js and Tailwind CSS",
+  title: "듀엣미니 블로그입니다.",
+  description: "듀엣미니의 소소한 일상과 맛있는 이야기들",
+  openGraph: {
+    title: "듀엣미니 블로그입니다.",
+    description: "듀엣미니의 소소한 일상과 맛있는 이야기들",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "듀엣미니 블로그",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
