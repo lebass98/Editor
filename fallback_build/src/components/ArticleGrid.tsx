@@ -88,7 +88,7 @@ export default function ArticleGrid({ theme = 'lime', offset = 0 }: { theme?: 'l
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
       </div>
-      
+
       <div className="flex flex-col flex-1">
         <h3 className={`text-2xl md:text-[28px] font-bold leading-tight mb-4 break-keep tracking-tight ${textColor}`}>
           {article.title}
@@ -96,7 +96,7 @@ export default function ArticleGrid({ theme = 'lime', offset = 0 }: { theme?: 'l
         <p className={`text-[15px] font-medium leading-relaxed break-keep ${subTextColor}`}>
           {article.excerpt}
         </p>
-        
+
         <div className={`flex items-center justify-between pt-4 relative ${textColor}`}>
           <span className="text-[13px] font-medium">{article.date}</span>
           <div className="flex flex-col items-center">
@@ -106,7 +106,7 @@ export default function ArticleGrid({ theme = 'lime', offset = 0 }: { theme?: 'l
               </div>
             ) : (
               <div className="w-9 h-9 rounded-full overflow-hidden mb-1 shrink-0 border border-black/10 shadow-sm">
-                 <Image src={article.authorImg} alt={article.author} width={36} height={36} className="object-cover" />
+                <Image src={article.authorImg} alt={article.author} width={36} height={36} className="object-cover" />
               </div>
             )}
             <span className="text-[11px] font-bold">{article.author}</span>
@@ -120,12 +120,12 @@ export default function ArticleGrid({ theme = 'lime', offset = 0 }: { theme?: 'l
     <section className="p-6 sm:p-8 lg:p-8 w-full min-h-screen">
       <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16">
         {/* Left Column */}
-        <div className="flex-1 flex flex-col gap-16 md:gap-24">
+        <div className="flex-1 flex flex-col gap-16 md">
           {leftArticles.map(renderArticle)}
         </div>
-        
+
         {/* Right Column (Staggered) */}
-        <div className="flex-1 flex flex-col gap-16 md:gap-24 md:mt-32">
+        <div className="flex-1 flex flex-col gap-16 md:mt-32">
           {rightArticles.map(renderArticle)}
         </div>
       </div>
