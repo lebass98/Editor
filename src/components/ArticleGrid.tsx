@@ -35,13 +35,13 @@ const articles = [
   },
   {
     id: 4,
-    title: "배드 버니가 얼마나 대단하길래 슈퍼볼에 나오냐고",
-    category: "CULTURE",
-    image: "/images/hero_lifestyle_tech_magazine_1771911195246.png",
-    excerpt: "라틴 팝의 세계적인 흥행, 그 중심에 있는 배드 버니",
-    date: "2026. 02. 11",
-    author: "김비플",
-    authorImg: "https://i.pravatar.cc/100?img=3"
+    title: "인생은 사십부터♥︎ 생일케이크",
+    category: "BIRTHDAY",
+    image: "/images/duet-mini-40-cake.jpg",
+    excerpt: "불혹을 맞이하신 남편분의 생일을 기념하여 주문해주신 숫자케이크",
+    date: "2019. 04. 17",
+    author: "듀엣미니",
+    authorImg: "/BlogC.svg"
   },
   {
     id: 5,
