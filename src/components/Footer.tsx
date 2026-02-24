@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronUp } from "lucide-react";
+import { getImagePath } from "@/utils/basePath";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -27,7 +28,7 @@ export default function Footer() {
 
         <Link href="/" className="mb-8">
           <Image 
-            src="/BlogC.svg" 
+            src={getImagePath("/BlogC.svg")} 
             alt="BlogChannel" 
             width={280} 
             height={55} 

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import { getImagePath } from "@/utils/basePath";
 
 export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" })
           {/* Logo - Pinned Top Left */}
           <Link href="/" className="pointer-events-auto">
             <Image 
-              src="/BlogC.svg" 
+              src={getImagePath("/BlogC.svg")} 
               alt="BlogChannel" 
               width={200} 
               height={40} 

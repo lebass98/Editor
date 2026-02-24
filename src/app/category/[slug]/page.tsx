@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getImagePath } from "@/utils/basePath";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -97,7 +98,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             <Link key={article.id} href={`/article/${article.id}`} className="group flex flex-col h-full bg-transparent">
               <div className="relative overflow-hidden aspect-[4/5] md:aspect-square lg:aspect-[3/4] object-cover bg-zinc-200 w-full mb-4">
                 <Image
-                  src={article.image}
+                  src={getImagePath(article.image)}
                   alt={article.title}
                   fill
                   className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
@@ -125,7 +126,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                       </div>
                     ) : (
                       <div className="w-8 h-8 rounded-full overflow-hidden mb-1 shrink-0 border border-black/10 shadow-sm">
-                         <Image src={article.authorImg} alt={article.author} width={32} height={32} className="object-cover" />
+                         <Image src={getImagePath(article.authorImg)} alt={article.author} width={32} height={32} className="object-cover" />
                       </div>
                     )}
                     <span className="text-[10px] font-bold text-zinc-700">{article.author}</span>

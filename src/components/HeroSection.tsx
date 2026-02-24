@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getImagePath } from "@/utils/basePath";
 
 const heroes = [
+// ... (I'll just replace the component block to be safe)
   {
     id: 1,
     image: "/images/hero_lifestyle_tech_magazine_1771911195246.png",
@@ -34,7 +36,7 @@ export default function HeroSection({ index = 0 }: { index?: number }) {
   return (
     <Link href={`/article/${data.id}`} className="relative w-full h-full overflow-hidden bg-black text-white group cursor-pointer block">
       <Image
-        src={data.image}
+        src={getImagePath(data.image)}
         alt={data.title}
         fill
         className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105 opacity-80"

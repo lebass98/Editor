@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getImagePath } from "@/utils/basePath";
 
 const articles = [
   {
@@ -78,7 +79,7 @@ export default function ArticleGrid({ theme = 'lime', offset = 0 }: { theme?: 'l
     <Link key={article.id} href={`/article/${article.id}`} className="group flex flex-col h-full bg-transparent">
       <div className="relative overflow-hidden aspect-[4/5] object-cover bg-zinc-100 w-full mb-4">
         <Image
-          src={article.image}
+          src={getImagePath(article.image)}
           alt={article.title}
           fill
           className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
@@ -106,7 +107,7 @@ export default function ArticleGrid({ theme = 'lime', offset = 0 }: { theme?: 'l
               </div>
             ) : (
               <div className="w-9 h-9 rounded-full overflow-hidden mb-1 shrink-0 border border-black/10 shadow-sm">
-                 <Image src={article.authorImg} alt={article.author} width={36} height={36} className="object-cover" />
+                 <Image src={getImagePath(article.authorImg)} alt={article.author} width={36} height={36} className="object-cover" />
               </div>
             )}
             <span className="text-[11px] font-bold">{article.author}</span>

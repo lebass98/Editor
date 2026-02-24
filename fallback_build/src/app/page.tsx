@@ -14,7 +14,7 @@ export default function Home() {
           <HeroSection index={0} />
         </div>
         
-        <div className="w-full lg:w-1/2 bg-[#ccff00] text-black relative z-10 min-h-screen">
+        <div className="w-full lg:w-1/2 bg-black text-black relative z-10 min-h-screen">
           <ArticleGrid theme="lime" offset={0} />
         </div>
       </section>
