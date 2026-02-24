@@ -27,7 +27,7 @@ export default function Footer() {
 
         <Link href="/" className="mb-8">
           <Image 
-            src="/BlogChannel.svg" 
+            src="/BlogC.svg" 
             alt="BlogChannel" 
             width={280} 
             height={55} 

@@ -18,7 +18,7 @@ export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" })
           {/* Logo - Pinned Top Left */}
           <Link href="/" className="pointer-events-auto">
             <Image 
-              src="/BlogChannel.svg" 
+              src="/BlogC.svg" 
               alt="BlogChannel" 
               width={200} 
               height={40} 
