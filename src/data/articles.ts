@@ -68,7 +68,7 @@ export const gridArticles: Article[] = [
         id: 6,
         title: "드디어 먹어본 제주김만복◡̈",
         category: "TRAVEL",
-        image: "/images/article_6_jeju.jpg",
+        image: "/images/article_6_jeju.png",
         excerpt: "공항 도착하자마자 달려간 제주 김만복! 이호테우 해변에서 맛보는 포송포송한 계란 김밥.",
         date: "2019. 04. 11",
         author: "듀엣미니",

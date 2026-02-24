@@ -15,9 +15,9 @@ export default function HeroSection({ index = 0 }: { index?: number }) {
         className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105 opacity-80"
         priority
       />
-      <div className="absolute top-6 left-6 bg-white/20 backdrop-blur-md text-white px-3 py-1 text-xs font-mono z-20 rounded-full border border-white/30">
+      {/* <div className="absolute top-6 left-6 bg-white/20 backdrop-blur-md text-white px-3 py-1 text-xs font-mono z-20 rounded-full border border-white/30">
         ID: {data.id}
-      </div>
+      </div> */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
       <div className="absolute bottom-0 left-0 p-6 md:p-10 lg:p-12 w-full">
         <div className="mb-3 font-bold uppercase tracking-widest text-xs md:text-sm">

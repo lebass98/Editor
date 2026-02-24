@@ -25,9 +25,9 @@ export default function ArticleGrid({
           fill
           className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
         />
-        <div className="absolute top-4 left-4 bg-black/50 text-white px-2 py-1 text-[10px] font-mono z-20">
+        {/* <div className="absolute top-4 left-4 bg-black/50 text-white px-2 py-1 text-[10px] font-mono z-20">
           ID: {article.id}
-        </div>
+        </div> */}
         <div className="absolute bottom-4 left-4 text-white font-bold text-sm uppercase tracking-widest drop-shadow-md z-10">
           {article.category}
         </div>
