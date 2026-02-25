@@ -41,7 +41,7 @@ export const heroArticles: Article[] = [
         authorImg: "logo"
     },
     {
-        id: 16,
+        id: 4,
         image: "/images/hero_lifestyle_tech_magazine_1771911195246.png",
         category: "TECH",
         title: "CES 2026에서 만난 미래 기술 돋보기",
@@ -55,7 +55,7 @@ export const heroArticles: Article[] = [
 export const gridArticles: Article[] = [
     // Section 1
     {
-        id: 4,
+        id: 5,
         title: "아이들에게 사랑받는 콩순이케이크👏",
         category: "KIDS",
         image: "/images/duet-mini-kongsuni.jpg",
@@ -65,7 +65,7 @@ export const gridArticles: Article[] = [
         authorImg: "/BlogC.svg"
     },
     {
-        id: 5,
+        id: 6,
         title: "생화와 과일이 듬뿍 올라간 하트생일케이크💓",
         category: "BIRTHDAY",
         image: "/images/duet-mini-heart-cake.jpg",
@@ -75,7 +75,7 @@ export const gridArticles: Article[] = [
         authorImg: "/BlogC.svg"
     },
     {
-        id: 6,
+        id: 7,
         title: "드디어 먹어본 제주김만복◡̈",
         category: "TRAVEL",
         image: "/images/article_6_jeju.png",
@@ -85,7 +85,7 @@ export const gridArticles: Article[] = [
         authorImg: "/BlogC.svg"
     },
     {
-        id: 7,
+        id: 8,
         title: "인생은 사십부터♥︎ 생일케이크",
         category: "BIRTHDAY",
         image: "/images/duet-mini-40-cake.jpg",
@@ -96,7 +96,7 @@ export const gridArticles: Article[] = [
     },
     // Section 2
     {
-        id: 8,
+        id: 9,
         title: "다도 입문을 위한 기본 구매 가이드",
         category: "EAT",
         image: "/images/article_minimalist_desk_1771911248411.png",
@@ -106,7 +106,7 @@ export const gridArticles: Article[] = [
         authorImg: "https://i.pravatar.cc/100?img=5"
     },
     {
-        id: 9,
+        id: 10,
         title: "[새로나왔] 2월 1주차 신상 리스트",
         category: "LIFE",
         image: "/images/article_workspace_coffee_1771911209733.png",
@@ -116,7 +116,7 @@ export const gridArticles: Article[] = [
         authorImg: "logo"
     },
     {
-        id: 10,
+        id: 11,
         title: "공간을 채우는 미니멀 인테리어",
         category: "INTERIOR",
         image: "/images/article_minimalist_desk_1771911248411.png",
@@ -126,7 +126,7 @@ export const gridArticles: Article[] = [
         authorImg: "https://i.pravatar.cc/100?img=1"
     },
     {
-        id: 11,
+        id: 12,
         title: "서울 근교 조용한 카페 투어",
         category: "CAFE",
         image: "/images/article_workspace_coffee_1771911209733.png",
@@ -137,7 +137,7 @@ export const gridArticles: Article[] = [
     },
     // Section 3
     {
-        id: 12,
+        id: 13,
         title: "봄을 기다리는 플라워 클래스",
         category: "HOBBY",
         image: "/images/duet-mini-heart-cake.jpg",
@@ -147,7 +147,7 @@ export const gridArticles: Article[] = [
         authorImg: "https://i.pravatar.cc/100?img=3"
     },
     {
-        id: 13,
+        id: 14,
         title: "매일 한 줄 필사의 즐거움",
         category: "LIFE",
         image: "/images/article_minimalist_desk_1771911248411.png",
@@ -157,7 +157,7 @@ export const gridArticles: Article[] = [
         authorImg: "https://i.pravatar.cc/100?img=4"
     },
     {
-        id: 14,
+        id: 15,
         title: "홈베이킹 첫걸음: 마들렌 만들기",
         category: "COOK",
         image: "/images/duet-mini-40-cake.jpg",
@@ -167,7 +167,7 @@ export const gridArticles: Article[] = [
         authorImg: "https://i.pravatar.cc/100?img=6"
     },
     {
-        id: 15,
+        id: 16,
         title: "반려식물과 함께하는 일상",
         category: "GARDENING",
         image: "/images/duet-mini-jeju.jpg",

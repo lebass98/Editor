@@ -42,7 +42,7 @@ const mockRelated = [
     authorImg: "logo"
   },
   {
-    id: 16,
+    id: 4,
     title: "CES 2026에서 만난 미래 기술 돋보기",
     category: "TECH",
     image: "/images/hero_lifestyle_tech_magazine_1771911195246.png",
@@ -111,7 +111,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body6: "테크의 미래를 기록하는 최재원입니다.",
     body7: "#테크리뷰 #신제품런칭 #오디오 #미래지향적"
   },
-  '4': {
+  '5': {
     category: 'KIDS',
     title: { line1: '아이들에게 사랑받는', line2: '콩순이케이크👏' },
     excerpt: '두돌을 맞은 꼬마아가씨를 위해 주문해주신 캐릭터케이크',
@@ -130,7 +130,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body6: "'듀엣미니케이크'는 늘 신선한 재료와 최고급 생화를 사용합니다.",
     body7: "✔️kakao ID. 듀엣미니\n✔️010.8632.0944\n✔️베이킹클래스.원데이클래스 진행중"
   },
-  '5': {
+  '6': {
     category: 'BIRTHDAY',
     title: { line1: '생화와 과일이 듬뿍', line2: '올라간 하트생일케이크💓' },
     excerpt: '얼그레이 시트에 생화와 달달한 딸기가 안성맞춤인 하트케이크',
@@ -149,7 +149,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body6: "'듀엣미니케이크'는 늘 신선한 재료와 최고급 생화를 사용합니다.",
     body7: "✔️kakao ID. 듀엣미니\n✔️010.8632.0944\n✔️베이킹클래스.원데이클래스 진행중"
   },
-  '6': {
+  '7': {
     category: 'TRAVEL',
     title: { line1: '드디어 먹어본', line2: '제주김만복◡̈' },
     excerpt: '공항 도착하자마자 달려간 제주 김만복! 이호테우 해변에서 맛보는 포송포송한 계란 김밥.',
@@ -168,7 +168,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body6: "그럼이만 뿅💙",
     body7: "#제주맛집 #제주김만복 #김만복김밥 #전복컵밥 #오징어무침 #제주도여행"
   },
-  '7': {
+  '8': {
     category: 'BIRTHDAY',
     title: { line1: '인생은 사십부터♥︎', line2: '생일케이크' },
     excerpt: '불혹을 맞이하신 남편분의 생일을 기념하여 주문해주신 숫자케이크',
@@ -187,7 +187,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body6: "'듀엣미니케이크'는 늘 신선한 재료와 최고급 생화를 사용합니다.",
     body7: "✔️kakao ID. 듀엣미니\n✔️010.8632.0944\n✔️베이킹클래스.원데이클래스 진행중"
   },
-  '8': {
+  '9': {
     category: 'EAT',
     title: { line1: '다도 입문을 위한', line2: '기본 구매 가이드' },
     excerpt: '어떤 다구로 첫자리를 여느냐가 그날의 맛과 기분을 좌우한다.',
@@ -206,7 +206,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body6: "다도의 즐거움을 기록하는 박주연입니다.",
     body7: "#다도입문 #홈카페 #티타임 #다구추천"
   },
-  '9': {
+  '10': {
     category: 'LIFE',
     title: { line1: '[새로나왔]', line2: '2월 1주차 신상 리스트' },
     excerpt: '턴테이블과 스파오 조사병단 망토',
@@ -225,7 +225,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body6: "매주 새로운 감각을 전하는 블로그 채널입니다.",
     body7: "#신상리스트 #새로나왔 #트렌드 #쇼핑가이드"
   },
-  '10': {
+  '11': {
     category: 'INTERIOR',
     title: { line1: '공간을 채우는', line2: '미니멀 인테리어' },
     excerpt: '비움으로써 채워지는 아름다움에 대하여',
@@ -244,7 +244,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body6: "공간의 가치를 믿는 이지은입니다.",
     body7: "#미니멀리즘 #랜선집들이 #인테리어 #공간스타일링"
   },
-  '11': {
+  '12': {
     category: 'CAFE',
     title: { line1: '서울 근교', line2: '조용한 카페 투어' },
     excerpt: '주말에 떠나기 좋은 아늑한 공간들',
@@ -263,7 +263,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body6: "공간을 기록하는 김민수입니다.",
     body7: "#카페투어 #나들이 #서울근교 #휴식"
   },
-  '12': {
+  '13': {
     category: 'HOBBY',
     title: { line1: '봄을 기다리는', line2: '플라워 클래스' },
     excerpt: '직접 만드는 계절의 향기',
@@ -282,7 +282,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body6: "꽃의 마음을 전하는 플로리스트 강입니다.",
     body7: "#플라워클래스 #꽃꽂이 #취미생활 #홈가드닝"
   },
-  '13': {
+  '14': {
     category: 'LIFE',
     title: { line1: '매일 한 줄', line2: '필사의 즐거움' },
     excerpt: '마음을 다스리는 기록의 힘',
@@ -301,7 +301,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body6: "기록의 힘을 믿는 정다운입니다.",
     body7: "#필사 #기록 #마음챙김 #자기계발"
   },
-  '14': {
+  '15': {
     category: 'COOK',
     title: { line1: '홈베이킹 첫걸음:', line2: '마들렌 만들기' },
     excerpt: '집안 가득 퍼지는 달콤한 냄새',
@@ -320,7 +320,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body6: "맛있는 시간을 굽는 베이커 킴입니다.",
     body7: "#홈베이킹 #마들렌 #디저트레시피 #쿠킹클래스"
   },
-  '15': {
+  '16': {
     category: 'GARDENING',
     title: { line1: '반려식물과 함께하는', line2: '일상' },
     excerpt: '초록색이 주는 평온함과 생명력',
@@ -339,7 +339,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body6: "초록의 가치를 전하는 그린썸입니다.",
     body7: "#반려식물 #가드닝 #플랜테리어 #식물집사"
   },
-  '16': {
+  '4': {
     category: 'TECH',
     title: { line1: 'CES 2026에서 만난', line2: '미래 기술 돋보기' },
     excerpt: '우리의 일상을 바꿀 혁신적인 가젯들',
