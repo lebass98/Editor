@@ -66,7 +66,7 @@ export default function CategoryFilteredView({ categoryName, articles }: Categor
             <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 <AnimatePresence mode="popLayout">
                     {filteredArticles.length > 0 ? (
-                        filteredArticles.map((article) => (
+                        filteredArticles.map((article, index) => (
                             <motion.div
                                 key={article.id}
                                 layout
@@ -75,8 +75,8 @@ export default function CategoryFilteredView({ categoryName, articles }: Categor
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.3 }}
                             >
-                                <Link href={`/article/${article.id}`} className="group flex flex-row md:flex-col gap-6 md:gap-0 h-auto md:h-full bg-transparent items-start md:items-stretch">
-                                    <div className="relative overflow-hidden aspect-[4/5] md:aspect-square lg:aspect-[3/4] object-cover bg-zinc-200 w-[40%] md:w-full shrink-0 md:mb-4">
+                                <Link href={`/article/${article.id}`} className={`group flex ${index % 2 !== 0 ? 'flex-row-reverse' : 'flex-row'} md:flex-col gap-3 md:gap-0 h-auto md:h-full bg-transparent items-start md:items-stretch`}>
+                                    <div className="relative overflow-hidden aspect-[4/5] md:aspect-square lg:aspect-[3/4] object-cover bg-zinc-200 w-1/2 md:w-full shrink-0 md:mb-4">
                                         <Image
                                             src={getImagePath(article.image)}
                                             alt={article.title}

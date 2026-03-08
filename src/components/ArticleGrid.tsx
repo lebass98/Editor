@@ -19,7 +19,7 @@ export default function ArticleGrid({
   const textColor = theme === 'black' ? 'text-white' : 'text-black';
   const subTextColor = theme === 'black' ? 'text-zinc-400' : 'text-zinc-900';
 
-  const renderArticle = (article: Article) => (
+  const renderArticle = (article: Article, isReversed: boolean = false) => (
     <motion.div
       key={article.id}
       initial={{ opacity: 0, y: 50 }}
@@ -28,8 +28,8 @@ export default function ArticleGrid({
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="h-full"
     >
-      <Link href={`/article/${article.id}`} className="group flex flex-row md:flex-col gap-6 md:gap-0 h-auto md:h-full bg-transparent items-start md:items-stretch">
-        <div className="relative overflow-hidden aspect-[4/5] object-cover bg-zinc-100 w-[40%] md:w-full shrink-0 md:mb-4">
+      <Link href={`/article/${article.id}`} className={`group flex ${isReversed ? 'flex-row-reverse' : 'flex-row'} md:flex-col gap-3 md:gap-0 h-auto md:h-full bg-transparent items-start md:items-stretch`}>
+        <div className="relative overflow-hidden aspect-[4/5] object-cover bg-zinc-100 w-1/2 md:w-full shrink-0 md:mb-4">
           <Image
             src={getImagePath(article.image)}
             alt={article.title}
@@ -65,7 +65,7 @@ export default function ArticleGrid({
             {article.excerpt}
           </p>
 
-          <div className={`flex items-center justify-between mt-auto pt-4 border-t md:border-t-0 border-white/10 md:relative ${textColor}`}>
+          <div className={`flex items-center justify-between border-t md:border-t-0 border-white/10 md:relative ${textColor}`}>
             <span className="text-[12px] md:text-[13px] font-medium opacity-60 md:opacity-100">{article.date}</span>
             <div className="flex flex-col items-center">
               <div className="w-8 h-8 md:w-9 md:h-9 rounded-full overflow-hidden mb-1 shrink-0 border border-black/10 shadow-sm">
@@ -84,12 +84,12 @@ export default function ArticleGrid({
       <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16">
         {/* Left Column */}
         <div className="flex-1 flex flex-col gap-10">
-          {leftArticles.map(renderArticle)}
+          {leftArticles.map((art, idx) => renderArticle(art, idx % 2 !== 0))}
         </div>
 
         {/* Right Column (Staggered) */}
         <div className="flex-1 flex flex-col gap-10 md:mt-32">
-          {rightArticles.map(renderArticle)}
+          {rightArticles.map((art, idx) => renderArticle(art, (leftArticles.length + idx) % 2 !== 0))}
         </div>
       </div>
     </section>
