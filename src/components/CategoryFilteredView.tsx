@@ -12,21 +12,28 @@ interface CategoryFilteredViewProps {
     articles: Article[];
 }
 
-const TABS = ["전체", "뉴스", "리뷰", "앱"];
+const TABS = ["ALL", "NEWS", "REVIEW", "APP"] as const;
+type TabType = typeof TABS[number];
+
+const SUB_CATEGORY_MAP: Record<string, string> = {
+    "NEWS": "뉴스",
+    "REVIEW": "리뷰",
+    "APP": "앱"
+};
 
 export default function CategoryFilteredView({ categoryName, articles }: CategoryFilteredViewProps) {
-    const [selectedTab, setSelectedTab] = useState("전체");
+    const [selectedTab, setSelectedTab] = useState<TabType>("ALL");
 
-    const filteredArticles = selectedTab === "전체"
+    const filteredArticles = selectedTab === "ALL"
         ? articles
-        : articles.filter(article => article.subCategory === selectedTab);
+        : articles.filter(article => article.subCategory === SUB_CATEGORY_MAP[selectedTab]);
 
     return (
         <>
             {/* Category Header */}
             <div className="flex flex-col items-center justify-center mb-16 mt-8">
                 <h1 className="text-5xl md:text-6xl font-bold mb-8 tracking-tighter uppercase">
-                    {categoryName}
+                    {selectedTab === "ALL" ? categoryName : selectedTab}
                 </h1>
 
                 {/* Sub Navigation */}
@@ -77,7 +84,7 @@ export default function CategoryFilteredView({ categoryName, articles }: Categor
                                             className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                                         />
                                         <div className="absolute bottom-4 left-4 text-white font-medium text-[10px] uppercase tracking-widest drop-shadow-md z-10 bg-black/50 px-1.5 py-0.5 rounded-sm">
-                                            {article.subCategory}
+                                            {article.subCategory === "뉴스" ? "NEWS" : article.subCategory === "리뷰" ? "REVIEW" : "APP"}
                                         </div>
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                                     </div>
@@ -111,7 +118,7 @@ export default function CategoryFilteredView({ categoryName, articles }: Categor
                             exit={{ opacity: 0 }}
                             className="col-span-full py-24 text-center text-zinc-500 font-medium"
                         >
-                            해당 카테고리에 속한 기사가 없습니다.
+                            No articles found in this category.
                         </motion.div>
                     )}
                 </AnimatePresence>

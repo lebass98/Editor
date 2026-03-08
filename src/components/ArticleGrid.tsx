@@ -44,7 +44,7 @@ export default function ArticleGrid({
               {article.category}
             </div>
             <div className="text-white font-medium text-[10px] uppercase tracking-widest drop-shadow-md bg-orange-500/80 px-1.5 py-0.5 rounded-sm">
-              {article.subCategory}
+              {article.subCategory === "뉴스" ? "NEWS" : article.subCategory === "리뷰" ? "REVIEW" : "APP"}
             </div>
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />

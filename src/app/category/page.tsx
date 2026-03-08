@@ -11,7 +11,7 @@ export default function CategoryRootPage() {
 
             <main className="pt-32 pb-16 px-6 sm:px-8 lg:px-12 w-full max-w-[1600px] mx-auto min-h-screen">
                 <CategoryFilteredView
-                    categoryName="ALL PORTFOLIO"
+                    categoryName="ALL"
                     articles={allArticles}
                 />
             </main>
