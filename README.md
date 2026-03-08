@@ -12,7 +12,7 @@
 - **Language**: TypeScript 5
 - **Styling**: Tailwind CSS v4
 - **Icons**: Lucide React
-- **Typography**: Pretendard GOV / Outfit (Google Fonts)
+- **Typography**: Pretendard GOV (Local Font)
 
 ## 📌 주요 레이아웃 및 기능
 

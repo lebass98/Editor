@@ -21,4 +21,13 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-pretendard-gov), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Ensure form elements inherit the global font */
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
 }
