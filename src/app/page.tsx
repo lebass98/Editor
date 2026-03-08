@@ -11,7 +11,7 @@ export default function Home() {
 
       {/* SECTION 1: Hero Left, Grid Right (Black) */}
       <section className="flex flex-col lg:flex-row w-full bg-black text-white">
-        <div className="w-full lg:w-1/2 h-[50vh] lg:h-screen lg:sticky top-0 relative shrink-0 z-0 border-b lg:border-r lg:border-b-0 border-white/10">
+        <div className="w-full lg:w-1/2 h-screen lg:h-screen lg:sticky top-0 relative shrink-0 z-0 border-b lg:border-r lg:border-b-0 border-white/10">
           <HeroSection index={0} />
         </div>
 
@@ -26,14 +26,14 @@ export default function Home() {
           <ArticleGrid theme="ivory" articles={gridArticles.slice(4, 8)} />
         </div>
 
-        <div className="w-full lg:w-1/2 h-[50vh] lg:h-screen lg:sticky top-0 relative shrink-0 z-0 order-1 lg:order-2">
+        <div className="w-full lg:w-1/2 h-screen lg:h-screen lg:sticky top-0 relative shrink-0 z-0 order-1 lg:order-2">
           <HeroSection index={1} />
         </div>
       </section>
 
       {/* SECTION 3: Hero Left, Grid Right (Black) */}
       <section className="flex flex-col lg:flex-row w-full bg-black text-white">
-        <div className="w-full lg:w-1/2 h-[50vh] lg:h-screen lg:sticky top-0 relative shrink-0 z-0 border-b lg:border-r lg:border-b-0 border-white/10">
+        <div className="w-full lg:w-1/2 h-screen lg:h-screen lg:sticky top-0 relative shrink-0 z-0 border-b lg:border-r lg:border-b-0 border-white/10">
           <HeroSection index={2} />
         </div>
 
@@ -48,7 +48,7 @@ export default function Home() {
           <ArticleGrid theme="ivory" articles={gridArticles.slice(12, 16)} />
         </div>
 
-        <div className="w-full lg:w-1/2 h-[50vh] lg:h-screen lg:sticky top-0 relative shrink-0 z-0 order-1 lg:order-2">
+        <div className="w-full lg:w-1/2 h-screen lg:h-screen lg:sticky top-0 relative shrink-0 z-0 order-1 lg:order-2">
           <HeroSection index={3} />
         </div>
       </section>

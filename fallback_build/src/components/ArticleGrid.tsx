@@ -117,7 +117,7 @@ export default function ArticleGrid({ theme = 'lime', offset = 0 }: { theme?: 'l
   );
 
   return (
-    <section className="p-6 sm:p-8 lg:p-8 w-full min-h-screen">
+    <section className="p-3 sm:p-8 lg:p-8 w-full min-h-screen">
       <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16">
         {/* Left Column */}
         <div className="flex-1 flex flex-col gap-16 md">

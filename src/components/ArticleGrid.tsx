@@ -28,18 +28,22 @@ export default function ArticleGrid({
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="h-full"
     >
-      <Link href={`/article/${article.id}`} className="group flex flex-col h-full bg-transparent">
-        <div className="relative overflow-hidden aspect-[4/5] object-cover bg-zinc-100 w-full mb-4">
+      <Link href={`/article/${article.id}`} className="group flex flex-row md:flex-col gap-6 md:gap-0 h-auto md:h-full bg-transparent items-start md:items-stretch">
+        <div className="relative overflow-hidden aspect-[4/5] object-cover bg-zinc-100 w-[40%] md:w-full shrink-0 md:mb-4">
           <Image
             src={getImagePath(article.image)}
             alt={article.title}
             fill
             className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           />
-          {/* <div className="absolute top-4 left-4 bg-black/50 text-white px-2 py-1 text-[10px] font-mono z-20">
-            ID: {article.id}
-          </div> */}
-          <div className="absolute bottom-4 left-4 flex gap-2 z-10">
+          {/* Mobile Badge */}
+          <div className="absolute bottom-3 left-3 flex gap-2 z-10 md:hidden">
+            <div className="text-white font-medium text-[10px] uppercase tracking-widest drop-shadow-md bg-black/50 px-1.5 py-0.5 rounded-sm">
+              {article.category}
+            </div>
+          </div>
+          {/* PC Badges */}
+          <div className="absolute bottom-4 left-4 hidden md:flex gap-2 z-10">
             <div className="text-white font-medium text-[10px] uppercase tracking-widest drop-shadow-md bg-black/50 px-1.5 py-0.5 rounded-sm">
               {article.category}
             </div>
@@ -50,21 +54,24 @@ export default function ArticleGrid({
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
         </div>
 
-        <div className="flex flex-col flex-1">
-          <h3 className={`text-2xl md:text-[28px] font-bold leading-tight mb-4 break-keep tracking-tight ${textColor}`}>
+        <div className="flex flex-col flex-1 py-1 md:py-0">
+          <div className="text-orange-500 font-bold text-[10px] uppercase tracking-widest mb-2 md:hidden">
+            {article.subCategory === "뉴스" ? "NEWS" : article.subCategory === "리뷰" ? "REVIEW" : "APP"}
+          </div>
+          <h3 className={`text-xl md:text-[28px] font-bold leading-tight mb-3 md:mb-4 break-keep tracking-tight ${textColor} line-clamp-2 md:line-clamp-none`}>
             {article.title}
           </h3>
-          <p className={`text-[15px] font-medium leading-relaxed break-keep ${subTextColor}`}>
+          <p className={`text-[14px] md:text-[15px] font-medium leading-relaxed break-keep ${subTextColor} line-clamp-2 md:line-clamp-none mb-4 md:mb-0`}>
             {article.excerpt}
           </p>
 
-          <div className={`flex items-center justify-between pt-4 relative ${textColor}`}>
-            <span className="text-[13px] font-medium">{article.date}</span>
+          <div className={`flex items-center justify-between mt-auto pt-4 border-t md:border-t-0 border-white/10 md:relative ${textColor}`}>
+            <span className="text-[12px] md:text-[13px] font-medium opacity-60 md:opacity-100">{article.date}</span>
             <div className="flex flex-col items-center">
-              <div className="w-9 h-9 rounded-full overflow-hidden mb-1 shrink-0 border border-black/10 shadow-sm">
+              <div className="w-8 h-8 md:w-9 md:h-9 rounded-full overflow-hidden mb-1 shrink-0 border border-black/10 shadow-sm">
                 <Image src={getImagePath(article.authorImg)} alt={article.author} width={36} height={36} className="object-cover" />
               </div>
-              <span className="text-[11px] font-bold">{article.author}</span>
+              <span className="text-[10px] md:text-[11px] font-bold">{article.author}</span>
             </div>
           </div>
         </div>
@@ -73,15 +80,15 @@ export default function ArticleGrid({
   );
 
   return (
-    <section className="p-6 sm:p-8 lg:p-8 w-full min-h-screen">
+    <section className="p-4 sm:p-8 lg:p-8 w-full min-h-screen">
       <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16">
         {/* Left Column */}
-        <div className="flex-1 flex flex-col gap-16">
+        <div className="flex-1 flex flex-col gap-10">
           {leftArticles.map(renderArticle)}
         </div>
 
         {/* Right Column (Staggered) */}
-        <div className="flex-1 flex flex-col gap-16 md:mt-32">
+        <div className="flex-1 flex flex-col gap-10 md:mt-32">
           {rightArticles.map(renderArticle)}
         </div>
       </div>

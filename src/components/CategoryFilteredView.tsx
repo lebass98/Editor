@@ -75,25 +75,28 @@ export default function CategoryFilteredView({ categoryName, articles }: Categor
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.3 }}
                             >
-                                <Link href={`/article/${article.id}`} className="group flex flex-col h-full bg-transparent">
-                                    <div className="relative overflow-hidden aspect-[4/5] md:aspect-square lg:aspect-[3/4] object-cover bg-zinc-200 w-full mb-4">
+                                <Link href={`/article/${article.id}`} className="group flex flex-row md:flex-col gap-6 md:gap-0 h-auto md:h-full bg-transparent items-start md:items-stretch">
+                                    <div className="relative overflow-hidden aspect-[4/5] md:aspect-square lg:aspect-[3/4] object-cover bg-zinc-200 w-[40%] md:w-full shrink-0 md:mb-4">
                                         <Image
                                             src={getImagePath(article.image)}
                                             alt={article.title}
                                             fill
                                             className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                                         />
-                                        <div className="absolute bottom-4 left-4 text-white font-medium text-[10px] uppercase tracking-widest drop-shadow-md z-10 bg-black/50 px-1.5 py-0.5 rounded-sm">
+                                        <div className="absolute bottom-4 left-4 hidden md:flex text-white font-medium text-[10px] uppercase tracking-widest drop-shadow-md z-10 bg-black/50 px-1.5 py-0.5 rounded-sm">
                                             {article.subCategory === "뉴스" ? "NEWS" : article.subCategory === "리뷰" ? "REVIEW" : "APP"}
                                         </div>
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                                     </div>
 
-                                    <div className="flex flex-col flex-1">
-                                        <h3 className="text-xl md:text-[22px] font-bold leading-tight mb-3 break-keep tracking-tight text-black flex-1">
+                                    <div className="flex flex-col flex-1 py-1 md:py-0">
+                                        <div className="text-orange-500 font-bold text-[10px] uppercase tracking-widest mb-2 md:hidden">
+                                            {article.subCategory === "뉴스" ? "NEWS" : article.subCategory === "리뷰" ? "REVIEW" : "APP"}
+                                        </div>
+                                        <h3 className="text-lg md:text-[22px] font-bold leading-tight mb-3 break-keep tracking-tight text-black line-clamp-2 md:line-clamp-none md:flex-1">
                                             {article.title}
                                         </h3>
-                                        <p className="text-[13px] font-medium leading-relaxed mb-6 break-keep text-zinc-600 line-clamp-2">
+                                        <p className="text-[14px] md:text-[13px] font-medium leading-relaxed mb-6 break-keep text-zinc-600 line-clamp-2">
                                             {article.excerpt}
                                         </p>
 
