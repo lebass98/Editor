@@ -39,8 +39,13 @@ export default function ArticleGrid({
           {/* <div className="absolute top-4 left-4 bg-black/50 text-white px-2 py-1 text-[10px] font-mono z-20">
             ID: {article.id}
           </div> */}
-          <div className="absolute bottom-4 left-4 text-white font-bold text-sm uppercase tracking-widest drop-shadow-md z-10">
-            {article.category}
+          <div className="absolute bottom-4 left-4 flex gap-2 z-10">
+            <div className="text-white font-bold text-sm uppercase tracking-widest drop-shadow-md bg-black/50 px-2 py-1 rounded">
+              {article.category}
+            </div>
+            <div className="text-white font-bold text-sm uppercase tracking-widest drop-shadow-md bg-orange-500/80 px-2 py-1 rounded">
+              {article.subCategory}
+            </div>
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
         </div>
