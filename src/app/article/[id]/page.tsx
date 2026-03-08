@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getImagePath } from "@/utils/basePath";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AnimatedArticleContent from "@/components/AnimatedArticleContent";
 
 // Generate static params for categories
 export function generateStaticParams() {
@@ -458,101 +459,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
           />
         </div>
 
-        {/* Right Scrollable Content */}
-        <div className="w-full lg:w-1/2 bg-[#fcfcfc] text-black relative z-10 flex flex-col shadow-[-10px_0_30px_rgba(0,0,0,0.05)]">
-
-          {/* Header Block (Takes full viewport height to match split view) */}
-          <div className="w-full relative flex flex-col justify-center px-8 lg:px-16 xl:px-24 min-h-[50vh] lg:min-h-screen pb-16 pt-32 lg:pt-0">
-            <div className="text-sm font-bold tracking-widest text-black mb-6 uppercase">
-              {data.category}
-            </div>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-bold leading-[1.3] tracking-tight text-black mb-8 break-keep">
-              <span className="border-b-[5px] border-black leading-[1.3]">{data.title.line1}</span><br className="hidden md:block" />
-              <span className="border-b-[5px] border-black leading-[1.3] mt-4 md:mt-0 inline-block">{data.title.line2}</span>
-              {data.title.line3 && (
-                <>
-                  <br className="hidden md:block" />
-                  <span className="border-b-[5px] border-black leading-[1.3] mt-4 md:mt-0 inline-block">{data.title.line3}</span>
-                </>
-              )}
-            </h1>
-
-            <p className="text-[16px] font-bold text-black mb-12 lg:mb-16">
-              {data.excerpt}
-            </p>
-
-            <div className="text-[13px] font-bold text-black">
-              {data.date}
-            </div>
-
-            {/* Author Badge Pinned Bottom Right of this header block */}
-            <div className="absolute bottom-8 right-8 lg:bottom-16 lg:right-16 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full overflow-hidden mb-2 border border-black/10 shadow-sm flex items-center justify-center bg-white">
-                <Image src={getImagePath(data.authorImg)} alt={data.author} width={32} height={32} className="object-contain" />
-              </div>
-              <span className="text-[12px] font-bold text-black">{data.author}</span>
-            </div>
-          </div>
-
-          {/* Body Content */}
-          <div className="px-8 lg:px-16 xl:px-24 pb-16 text-black text-[15px] leading-[1.6] tracking-tight break-keep">
-            <p className="mb-8">
-              {data.body1}
-            </p>
-
-            <p className="mb-12">
-              {data.body2}
-            </p>
-
-            <div className="my-16 flex justify-center border-y border-black py-8">
-              <h2 className={`text-2xl font-bold text-center ${data.h2color} italic`}>
-                {data.h2.line1}<br />
-                {data.h2.line2}
-              </h2>
-            </div>
-
-            <p className="mb-8">
-              {data.body3}
-            </p>
-
-            <figure className="mb-12 relative w-full bg-zinc-100 rounded-lg overflow-hidden border border-zinc-200 shadow-sm">
-              <Image src={getImagePath(data.figureImage)} alt={data.title.line1} width={800} height={600} className="w-full h-auto object-contain" />
-            </figure>
-
-            <p className="mb-8">
-              {data.body4}
-            </p>
-
-            <p className="mb-8">
-              {data.body5}
-            </p>
-
-            <p className="mb-16">
-              {data.body6}<br /><br />
-              {data.body7.split('\n').map((line: string, i: number) => (
-                <span key={i}>{line}<br /></span>
-              ))}
-            </p>
-
-            {/* About Author Section inside the right panel */}
-            <div className="mt-20 pt-10 border-t border-zinc-200">
-              <div className="text-[13px] font-bold mb-6 uppercase tracking-wider">ABOUT AUTHOR</div>
-              <div className="flex items-start gap-5">
-                <div className="w-16 h-16 rounded-full border border-zinc-200 shrink-0 flex items-center justify-center overflow-hidden bg-white">
-                  <Image src={getImagePath("/BlogC.svg")} alt="듀엣미니" width={40} height={40} className="object-contain" />
-                </div>
-                <div className="flex flex-col">
-                  <div className="font-bold text-[15px] mb-2 text-black">듀엣미니</div>
-                  <div className="text-[13px] text-zinc-600 leading-relaxed font-medium break-keep">
-                    수제 케이크 전문점. 늘 신선한 재료와 최고급 생화를 사용하여 소중한 날의 퀄리티를 한 층 더 높여드립니다.
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
+        {/* Right Scrollable Content with Animations */}
+        <AnimatedArticleContent data={data} />
       </section>
 
       {/* Full Width Related Articles Section */}
