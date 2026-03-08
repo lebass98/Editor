@@ -56,7 +56,7 @@ const mockRelated = [
 const MOCK_ARTICLE_DATA: Record<string, any> = {
   '1': {
     category: 'WEDDING',
-    title: { line1: '결혼식의 퀄리티를', line2: '높여주는 예쁜 웨딩케이크💙' },
+    title: { line1: '결혼식의 퀄리티를', line2: '높여주는 예쁜', line3: '웨딩케이크💙' },
     excerpt: '퍼플위주로 작업한 심플한 2단 웨딩케이크',
     date: '2019. 05. 08',
     author: '듀엣미니',
@@ -470,6 +470,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
             <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-bold leading-[1.3] tracking-tight text-black mb-8 break-keep">
               <span className="border-b-[5px] border-black pb-1 leading-[1.5]">{data.title.line1}</span><br className="hidden md:block" />
               <span className="border-b-[5px] border-black pb-1 leading-[1.5] mt-4 md:mt-0 inline-block">{data.title.line2}</span>
+              {data.title.line3 && (
+                <>
+                  <br className="hidden md:block" />
+                  <span className="border-b-[5px] border-black pb-1 leading-[1.5] mt-4 md:mt-0 inline-block">{data.title.line3}</span>
+                </>
+              )}
             </h1>
 
             <p className="text-[16px] font-bold text-black mb-12 lg:mb-16">
