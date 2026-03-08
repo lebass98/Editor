@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimatedArticleContent from "@/components/AnimatedArticleContent";
 
+import ReadingProgressBar from "@/components/ReadingProgressBar";
+
 // Generate static params for categories
 export function generateStaticParams() {
   return Array.from({ length: 20 }, (_, i) => ({ id: (i + 1).toString() }));
@@ -445,6 +447,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
   return (
     <div className="min-h-screen bg-[#fcfcfc] text-black">
       <Navbar theme="dark" />
+      <ReadingProgressBar />
 
       {/* 50/50 Split Section */}
       <section className="flex flex-col lg:flex-row w-full">
