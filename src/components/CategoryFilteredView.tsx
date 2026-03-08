@@ -76,7 +76,7 @@ export default function CategoryFilteredView({ categoryName, articles }: Categor
                                             fill
                                             className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                                         />
-                                        <div className="absolute bottom-4 left-4 text-white font-bold text-sm uppercase tracking-widest drop-shadow-md z-10 bg-black/50 px-2 py-1 rounded">
+                                        <div className="absolute bottom-4 left-4 text-white font-medium text-[10px] uppercase tracking-widest drop-shadow-md z-10 bg-black/50 px-1.5 py-0.5 rounded-sm">
                                             {article.subCategory}
                                         </div>
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />

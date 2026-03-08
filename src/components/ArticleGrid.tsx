@@ -40,10 +40,10 @@ export default function ArticleGrid({
             ID: {article.id}
           </div> */}
           <div className="absolute bottom-4 left-4 flex gap-2 z-10">
-            <div className="text-white font-bold text-sm uppercase tracking-widest drop-shadow-md bg-black/50 px-2 py-1 rounded">
+            <div className="text-white font-medium text-[10px] uppercase tracking-widest drop-shadow-md bg-black/50 px-1.5 py-0.5 rounded-sm">
               {article.category}
             </div>
-            <div className="text-white font-bold text-sm uppercase tracking-widest drop-shadow-md bg-orange-500/80 px-2 py-1 rounded">
+            <div className="text-white font-medium text-[10px] uppercase tracking-widest drop-shadow-md bg-orange-500/80 px-1.5 py-0.5 rounded-sm">
               {article.subCategory}
             </div>
           </div>
