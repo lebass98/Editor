@@ -244,7 +244,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     figureImage: '/images/article_minimalist_desk_v2.png',
     body4: '편안함을 최우선으로 하는 미니멀 인테리어 팁을 전합니다.',
     body5: '공간이 바뀌면 삶의 질이 바뀝니다.',
-    body6: "공간의 가치를 믿는 이지은입니다.",
+    body6: "공간의 가치를 믿는 듀엣미니입니다.",
     body7: "#미니멀리즘 #랜선집들이 #인테리어 #공간스타일링"
   },
   '12': {
@@ -263,7 +263,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     figureImage: '/images/article_workspace_coffee_v2.png',
     body4: '이번 주말, 당신의 소중한 휴식을 위해 미리 체크해두세요.',
     body5: '함께 가고 싶은 사람에게 이 글을 공유해보세요.',
-    body6: "공간을 기록하는 김민수입니다.",
+    body6: "공간을 기록하는 듀엣미니입니다.",
     body7: "#카페투어 #나들이 #서울근교 #휴식"
   },
   '13': {
@@ -282,7 +282,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     figureImage: '/images/duet-mini-heart-cake.jpg',
     body4: '계절의 변화를 가장 먼저 집 안으로 들여놓아 보세요.',
     body5: '당신의 하루가 꽃처럼 환해지길 바랍니다.',
-    body6: "꽃의 마음을 전하는 플로리스트 강입니다.",
+    body6: "꽃의 마음을 전하는 듀엣미니입니다.",
     body7: "#플라워클래스 #꽃꽂이 #취미생활 #홈가드닝"
   },
   '14': {
@@ -301,7 +301,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     figureImage: '/images/article_minimalist_desk_v2.png',
     body4: '꾸준함이 만드는 기록의 기적을 직접 경험해보세요.',
     body5: '오늘 당신의 마음을 울린 한 줄은 무엇인가요?',
-    body6: "기록의 힘을 믿는 정다운입니다.",
+    body6: "기록의 힘을 믿는 듀엣미니입니다.",
     body7: "#필사 #기록 #마음챙김 #자기계발"
   },
   '15': {
@@ -320,7 +320,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     figureImage: '/images/duet-mini-40-cake.jpg',
     body4: '사랑하는 사람들을 위해 따뜻한 간식을 구워보는 건 어떨까요?',
     body5: '베이킹은 사랑입니다.',
-    body6: "맛있는 시간을 굽는 베이커 킴입니다.",
+    body6: "맛있는 시간을 굽는 듀엣미니입니다.",
     body7: "#홈베이킹 #마들렌 #디저트레시피 #쿠킹클래스"
   },
   '16': {
@@ -339,7 +339,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     figureImage: '/images/duet-mini-jeju.jpg',
     body4: '당신의 일상에도 초록색 한 점을 들여보세요.',
     body5: '생명의 신비함을 가까이서 느껴보세요.',
-    body6: "초록의 가치를 전하는 그린썸입니다.",
+    body6: "초록의 가치를 전하는 듀엣미니입니다.",
     body7: "#반려식물 #가드닝 #플랜테리어 #식물집사"
   },
   '4': {
@@ -377,7 +377,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     figureImage: '/images/hero_lifestyle_tech_magazine_v2.png',
     body4: '일상을 환하게 밝혀줄 나만의 컬러를 찾아보세요.',
     body5: '작은 소품 하나로도 분위기를 완전히 바꿀 수 있습니다.',
-    body6: "감각적인 하루를 제안하는 이지은입니다.",
+    body6: "감각적인 하루를 제안하는 듀엣미니입니다.",
     body7: "#봄스타일링 #컬러가이드 #인테리어팁 #데일리룩"
   },
   '18': {
@@ -396,7 +396,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     figureImage: '/images/article_workspace_coffee_v2.png',
     body4: '지도를 잠시 내려놓고 발길 닿는 대로 걷는 즐거움을 느껴보세요.',
     body5: '그 속에서 당신만의 도쿄 이야기를 만들어보길 바랍니다.',
-    body6: "여행의 기억을 기록하는 김민수입니다.",
+    body6: "여행의 기억을 기록하는 듀엣미니입니다.",
     body7: "#도쿄산책 #골목여행 #카페투어 #일본여행기"
   },
   '19': {
@@ -415,7 +415,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     figureImage: '/images/article_minimalist_desk_v2.png',
     body4: '매일 한 끼만이라도 나를 위한 건강한 선택을 해보는 건 어떨까요?',
     body5: '몸의 변화를 직접 느껴보세요.',
-    body6: "맛있는 일상을 요리하는 정다운입니다.",
+    body6: "맛있는 일상을 요리하는 듀엣미니입니다.",
     body7: "#비건레시피 #건강식단 #요리팁 #채식주의"
   },
   '20': {

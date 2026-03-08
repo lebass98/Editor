@@ -44,15 +44,9 @@ export default function HeroSection({ index = 0 }: { index?: number }) {
               {data.date}
             </div>
             <div className="flex flex-col items-center">
-              {data.authorImg === "logo" ? (
-                <div className={`w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-bold italic mb-1 border border-white/20 shadow-sm text-[10px]`}>
-                  BlogChannel
-                </div>
-              ) : (
-                <div className="w-10 h-10 rounded-full overflow-hidden mb-1 border border-white/20 shadow-sm">
-                  <Image src={getImagePath(data.authorImg)} alt={data.author} width={40} height={40} className="object-cover" />
-                </div>
-              )}
+              <div className="w-10 h-10 rounded-full overflow-hidden mb-1 border border-white/20 shadow-sm">
+                <Image src={getImagePath(data.authorImg)} alt={data.author} width={40} height={40} className="object-cover" />
+              </div>
               <span className="text-[10px] font-bold">{data.author}</span>
             </div>
           </div>

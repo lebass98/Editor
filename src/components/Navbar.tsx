@@ -57,7 +57,7 @@ export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" })
           <Link href="/" className="pointer-events-auto">
             <Image
               src={getImagePath("/BlogC.svg")}
-              alt="BlogChannel"
+              alt="듀엣미니"
               width={200}
               height={40}
               className={`w-auto h-8 sm:h-9 object-contain drop-shadow-sm ${isLight ? "invert" : ""}`}

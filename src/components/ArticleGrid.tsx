@@ -61,15 +61,9 @@ export default function ArticleGrid({
           <div className={`flex items-center justify-between pt-4 relative ${textColor}`}>
             <span className="text-[13px] font-medium">{article.date}</span>
             <div className="flex flex-col items-center">
-              {article.authorImg === "logo" ? (
-                <div className={`w-9 h-9 rounded-full ${theme === 'black' ? 'bg-white text-black' : 'bg-black text-white'} flex items-center justify-center font-bold italic mb-1 shrink-0 text-[8px] border shadow-sm`}>
-                  BlogChannel
-                </div>
-              ) : (
-                <div className="w-9 h-9 rounded-full overflow-hidden mb-1 shrink-0 border border-black/10 shadow-sm">
-                  <Image src={getImagePath(article.authorImg)} alt={article.author} width={36} height={36} className="object-cover" />
-                </div>
-              )}
+              <div className="w-9 h-9 rounded-full overflow-hidden mb-1 shrink-0 border border-black/10 shadow-sm">
+                <Image src={getImagePath(article.authorImg)} alt={article.author} width={36} height={36} className="object-cover" />
+              </div>
               <span className="text-[11px] font-bold">{article.author}</span>
             </div>
           </div>

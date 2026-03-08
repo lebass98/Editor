@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white pt-16 pb-12 px-6 sm:px-12 lg:px-16 w-full border-t border-zinc-900 relative z-30">
       <div className="max-w-[1600px] mx-auto flex flex-col items-start relative">
-        
+
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[11px] md:text-sm font-bold tracking-wider uppercase mb-10">
           <Link href="/" className="hover:underline">ABOUT</Link>
           <span className="text-zinc-700 font-light text-[10px]">|</span>
@@ -27,15 +27,15 @@ export default function Footer() {
         </div>
 
         <Link href="/" className="mb-8">
-          <Image 
-            src={getImagePath("/BlogC.svg")} 
-            alt="BlogChannel" 
-            width={280} 
-            height={55} 
-            className="w-auto h-12 md:h-16 object-contain" 
+          <Image
+            src={getImagePath("/BlogC.svg")}
+            alt="듀엣미니"
+            width={280}
+            height={55}
+            className="w-auto h-12 md:h-16 object-contain"
           />
         </Link>
-        
+
         <div className="space-y-1.5 text-[11px] md:text-sm text-zinc-400 font-medium tracking-tight mb-8">
           <p>
             광고 제휴 문의 <span className="mx-2 text-zinc-700 font-light">|</span> hello@blogC.co.kr
@@ -46,10 +46,10 @@ export default function Footer() {
         </div>
 
         <div className="text-[10px] md:text-xs text-zinc-500 font-medium tracking-tight uppercase">
-        서울 가산©BlogChannel. ALL RIGHTS RESERVED.
+          서울 가산©듀엣미니. ALL RIGHTS RESERVED.
         </div>
 
-        <button 
+        <button
           onClick={scrollToTop}
           className="absolute right-0 bottom-0 bg-white text-black p-3 rounded-full hover:bg-zinc-200 transition-colors shadow-lg"
           aria-label="Scroll to top"

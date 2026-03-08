@@ -93,15 +93,9 @@ export default function CategoryFilteredView({ categoryName, articles }: Categor
                                         <div className="flex items-center justify-between mt-auto pt-4 relative text-black border-t border-zinc-100">
                                             <span className="text-[11px] font-medium text-zinc-500">{article.date}</span>
                                             <div className="flex flex-col items-center">
-                                                {article.authorImg === "logo" ? (
-                                                    <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold italic mb-1 shrink-0 text-[7px] border shadow-sm tracking-tighter">
-                                                        BlogC
-                                                    </div>
-                                                ) : (
-                                                    <div className="w-8 h-8 rounded-full overflow-hidden mb-1 shrink-0 border border-black/10 shadow-sm">
-                                                        <Image src={getImagePath(article.authorImg)} alt={article.author} width={32} height={32} className="object-cover" />
-                                                    </div>
-                                                )}
+                                                <div className="w-8 h-8 rounded-full overflow-hidden mb-1 shrink-0 border border-black/10 shadow-sm">
+                                                    <Image src={getImagePath(article.authorImg)} alt={article.author} width={32} height={32} className="object-cover" />
+                                                </div>
                                                 <span className="text-[10px] font-bold text-zinc-700">{article.author}</span>
                                             </div>
                                         </div>
