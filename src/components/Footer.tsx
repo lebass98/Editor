@@ -38,15 +38,15 @@ export default function Footer() {
         
         <div className="space-y-1.5 text-[11px] md:text-sm text-zinc-400 font-medium tracking-tight mb-8">
           <p>
-            광고 제휴 문의 <span className="mx-2 text-zinc-700 font-light">|</span> hello@the-edit.co.kr
+            광고 제휴 문의 <span className="mx-2 text-zinc-700 font-light">|</span> hello@blogC.co.kr
           </p>
           <p>
-            보도자료 <span className="mx-2 text-zinc-700 font-light">|</span> press@the-edit.co.kr
+            보도자료 <span className="mx-2 text-zinc-700 font-light">|</span> press@blogC.co.kr
           </p>
         </div>
 
         <div className="text-[10px] md:text-xs text-zinc-500 font-medium tracking-tight uppercase">
-          서울시 강남구 도산대로94길 19 진영빌딩 2층 ©BlogChannel. ALL RIGHTS RESERVED.
+        서울 가산©BlogChannel. ALL RIGHTS RESERVED.
         </div>
 
         <button 

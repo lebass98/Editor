@@ -32,10 +32,10 @@ export default function Footer() {
         
         <div className="space-y-1.5 text-[11px] md:text-sm text-zinc-400 font-medium tracking-tight mb-8">
           <p>
-            광고 제휴 문의 <span className="mx-2 text-zinc-700 font-light">|</span> hello@the-edit.co.kr
+            광고 제휴 문의 <span className="mx-2 text-zinc-700 font-light">|</span> hello@blogC.co.kr
           </p>
           <p>
-            보도자료 <span className="mx-2 text-zinc-700 font-light">|</span> press@the-edit.co.kr
+            보도자료 <span className="mx-2 text-zinc-700 font-light">|</span> press@blogC.co.kr
           </p>
         </div>
 

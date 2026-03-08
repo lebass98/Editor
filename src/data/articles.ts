@@ -22,7 +22,7 @@ export const heroArticles: Article[] = [
     },
     {
         id: 2,
-        image: "/images/article_workspace_coffee_1771911209733.png",
+        image: "/images/article_workspace_coffee_v2.png",
         category: "CULTURE",
         title: "연휴가 타이밍, 독서 입문 책 5",
         excerpt: "독서의 세계에 온 걸 환영해요",
@@ -32,7 +32,7 @@ export const heroArticles: Article[] = [
     },
     {
         id: 3,
-        image: "/images/article_modern_gadgets_1771911232807.png",
+        image: "/images/article_modern_gadgets_v2.png",
         category: "TECH",
         title: "혁신을 이끄는 새로운 오디오 런칭",
         excerpt: "미래 지향적인 디자인과 사운드의 결합",
@@ -41,8 +41,8 @@ export const heroArticles: Article[] = [
         authorImg: "logo"
     },
     {
-        id: 16,
-        image: "/images/hero_lifestyle_tech_magazine_1771911195246.png",
+        id: 4,
+        image: "/images/hero_lifestyle_tech_magazine_v2.png",
         category: "TECH",
         title: "CES 2026에서 만난 미래 기술 돋보기",
         excerpt: "우리의 일상을 바꿀 혁신적인 가젯들",
@@ -55,7 +55,7 @@ export const heroArticles: Article[] = [
 export const gridArticles: Article[] = [
     // Section 1
     {
-        id: 4,
+        id: 5,
         title: "아이들에게 사랑받는 콩순이케이크👏",
         category: "KIDS",
         image: "/images/duet-mini-kongsuni.jpg",
@@ -65,7 +65,7 @@ export const gridArticles: Article[] = [
         authorImg: "/BlogC.svg"
     },
     {
-        id: 5,
+        id: 6,
         title: "생화와 과일이 듬뿍 올라간 하트생일케이크💓",
         category: "BIRTHDAY",
         image: "/images/duet-mini-heart-cake.jpg",
@@ -75,7 +75,7 @@ export const gridArticles: Article[] = [
         authorImg: "/BlogC.svg"
     },
     {
-        id: 6,
+        id: 7,
         title: "드디어 먹어본 제주김만복◡̈",
         category: "TRAVEL",
         image: "/images/article_6_jeju.png",
@@ -85,7 +85,7 @@ export const gridArticles: Article[] = [
         authorImg: "/BlogC.svg"
     },
     {
-        id: 7,
+        id: 8,
         title: "인생은 사십부터♥︎ 생일케이크",
         category: "BIRTHDAY",
         image: "/images/duet-mini-40-cake.jpg",
@@ -96,40 +96,40 @@ export const gridArticles: Article[] = [
     },
     // Section 2
     {
-        id: 8,
+        id: 9,
         title: "다도 입문을 위한 기본 구매 가이드",
         category: "EAT",
-        image: "/images/article_minimalist_desk_1771911248411.png",
+        image: "/images/article_minimalist_desk_v2.png",
         excerpt: "어떤 다구로 첫자리를 여느냐가 그날의 맛과 기분을 좌우한다.",
         date: "2026. 02. 18",
         author: "박주연",
         authorImg: "https://i.pravatar.cc/100?img=5"
     },
     {
-        id: 9,
+        id: 10,
         title: "[새로나왔] 2월 1주차 신상 리스트",
         category: "LIFE",
-        image: "/images/article_workspace_coffee_1771911209733.png",
+        image: "/images/article_workspace_coffee_v2.png",
         excerpt: "턴테이블과 스파오 조사병단 망토",
         date: "2026. 02. 06",
         author: "BlogChannel",
         authorImg: "logo"
     },
     {
-        id: 10,
+        id: 11,
         title: "공간을 채우는 미니멀 인테리어",
         category: "INTERIOR",
-        image: "/images/article_minimalist_desk_1771911248411.png",
+        image: "/images/article_minimalist_desk_v2.png",
         excerpt: "비움으로써 채워지는 아름다움에 대하여",
         date: "2026. 02. 20",
         author: "이지은",
         authorImg: "https://i.pravatar.cc/100?img=1"
     },
     {
-        id: 11,
+        id: 12,
         title: "서울 근교 조용한 카페 투어",
         category: "CAFE",
-        image: "/images/article_workspace_coffee_1771911209733.png",
+        image: "/images/article_workspace_coffee_v2.png",
         excerpt: "주말에 떠나기 좋은 아늑한 공간들",
         date: "2026. 02. 15",
         author: "김민수",
@@ -137,7 +137,7 @@ export const gridArticles: Article[] = [
     },
     // Section 3
     {
-        id: 12,
+        id: 13,
         title: "봄을 기다리는 플라워 클래스",
         category: "HOBBY",
         image: "/images/duet-mini-heart-cake.jpg",
@@ -147,17 +147,17 @@ export const gridArticles: Article[] = [
         authorImg: "https://i.pravatar.cc/100?img=3"
     },
     {
-        id: 13,
+        id: 14,
         title: "매일 한 줄 필사의 즐거움",
         category: "LIFE",
-        image: "/images/article_minimalist_desk_1771911248411.png",
+        image: "/images/article_minimalist_desk_v2.png",
         excerpt: "마음을 다스리는 기록의 힘",
         date: "2026. 02. 22",
         author: "정다운",
         authorImg: "https://i.pravatar.cc/100?img=4"
     },
     {
-        id: 14,
+        id: 15,
         title: "홈베이킹 첫걸음: 마들렌 만들기",
         category: "COOK",
         image: "/images/duet-mini-40-cake.jpg",
@@ -167,7 +167,7 @@ export const gridArticles: Article[] = [
         authorImg: "https://i.pravatar.cc/100?img=6"
     },
     {
-        id: 15,
+        id: 16,
         title: "반려식물과 함께하는 일상",
         category: "GARDENING",
         image: "/images/duet-mini-jeju.jpg",
@@ -181,7 +181,7 @@ export const gridArticles: Article[] = [
         id: 17,
         title: "2026 봄/여름 트렌드 컬러 가이드",
         category: "STYLE",
-        image: "/images/hero_lifestyle_tech_magazine_1771911195246.png",
+        image: "/images/hero_lifestyle_tech_magazine_v2.png",
         excerpt: "올해의 컬러로 꾸며보는 나만의 공간과 스타일",
         date: "2026. 02. 25",
         author: "이지은",
@@ -191,7 +191,7 @@ export const gridArticles: Article[] = [
         id: 18,
         title: "나만 알고 싶은 도쿄의 조용한 골목들",
         category: "TRAVEL",
-        image: "/images/article_workspace_coffee_1771911209733.png",
+        image: "/images/article_workspace_coffee_v2.png",
         excerpt: "번잡함을 벗어나 만나는 도쿄의 진정한 매력",
         date: "2026. 02. 23",
         author: "김민수",
@@ -201,7 +201,7 @@ export const gridArticles: Article[] = [
         id: 19,
         title: "비건 입문자를 위한 제철 채소 요리 팁",
         category: "EAT",
-        image: "/images/article_minimalist_desk_1771911248411.png",
+        image: "/images/article_minimalist_desk_v2.png",
         excerpt: "몸도 마음도 가벼워지는 맛있는 채식 생활",
         date: "2026. 02. 21",
         author: "정다운",
@@ -211,7 +211,7 @@ export const gridArticles: Article[] = [
         id: 20,
         title: "주말의 생산성을 높이는 5가지 모닝 루틴",
         category: "LIFE",
-        image: "/images/article_modern_gadgets_1771911232807.png",
+        image: "/images/article_modern_gadgets_v2.png",
         excerpt: "더 나은 월요일을 준비하는 작은 습관의 힘",
         date: "2026. 02. 19",
         author: "최재원",

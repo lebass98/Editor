@@ -43,7 +43,7 @@ export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" })
 
       {/* Menu Panel */}
       <div 
-        className={`fixed inset-y-0 right-0 z-50 w-full sm:w-1/2 bg-[#fcfcfc] shadow-2xl transition-transform duration-500 ease-in-out transform ${
+        className={`fixed inset-y-0 right-0 z-50 w-full sm:w-1/2 shadow-2xl transition-transform duration-500 ease-in-out transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

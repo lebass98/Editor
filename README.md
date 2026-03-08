@@ -1,6 +1,6 @@
 # The Edit Clone Project 📰
 
-디에디트(https://the-edit.co.kr/) 매거진의 감각적인 UI와 50:50 좌우 분할 스플릿 레이아웃을 클론 코딩한 웹 애플리케이션 화면 구현 저장소입니다. 세련된 고대비 색상과 타이포그래피, 매끄러운 오버레이 메뉴, 그리고 지그재그 그리드 기반의 기사 레이아웃을 반응형으로 구성했습니다.
+디에디트(https://blogC.co.kr/) 매거진의 감각적인 UI와 50:50 좌우 분할 스플릿 레이아웃을 클론 코딩한 웹 애플리케이션 화면 구현 저장소입니다. 세련된 고대비 색상과 타이포그래피, 매끄러운 오버레이 메뉴, 그리고 지그재그 그리드 기반의 기사 레이아웃을 반응형으로 구성했습니다.
 
 - **GitHub Repository**: [https://github.com/lebass98/Editor](https://github.com/lebass98/Editor)
 - **Live Demo**: [https://lebass98.github.io/Editor/](https://lebass98.github.io/Editor/) (예정)
