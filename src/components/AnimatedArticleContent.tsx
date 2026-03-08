@@ -147,7 +147,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     <div className="text-[13px] font-bold mb-6 uppercase tracking-wider">ABOUT AUTHOR</div>
                     <div className="flex items-start gap-5">
                         <div className="w-16 h-16 rounded-full border border-zinc-200 shrink-0 flex items-center justify-center overflow-hidden bg-white">
-                            <Image src={getImagePath("/BlogC.svg")} alt="듀엣미니" width={40} height={40} className="object-contain" />
+                            <Image src={getImagePath("/images/author_duetmini.png")} alt="듀엣미니" width={40} height={40} className="object-contain" />
                         </div>
                         <div className="flex flex-col">
                             <div className="font-bold text-[15px] mb-2 text-black">듀엣미니</div>

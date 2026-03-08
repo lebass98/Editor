@@ -20,7 +20,7 @@ export const heroArticles: Article[] = [
         excerpt: "퍼플위주로 작업한 심플한 2단 웨딩케이크",
         date: "2019. 05. 08",
         author: "듀엣미니",
-        authorImg: "/BlogC.svg"
+        authorImg: "/images/author_duetmini.png"
     },
     {
         id: 2,
@@ -30,8 +30,8 @@ export const heroArticles: Article[] = [
         title: "연휴가 타이밍, 독서 입문 책 5",
         excerpt: "독서의 세계에 온 걸 환영해요",
         date: "2026. 02. 11",
-        author: "박주연",
-        authorImg: "https://i.pravatar.cc/100?img=5"
+        author: "듀엣미니",
+        authorImg: "/images/author_duetmini.png"
     },
     {
         id: 3,
@@ -41,8 +41,8 @@ export const heroArticles: Article[] = [
         title: "혁신을 이끄는 새로운 오디오 런칭",
         excerpt: "미래 지향적인 디자인과 사운드의 결합",
         date: "2026. 02. 05",
-        author: "최재원",
-        authorImg: "logo"
+        author: "듀엣미니",
+        authorImg: "/images/author_duetmini.png"
     },
     {
         id: 4,
@@ -52,8 +52,8 @@ export const heroArticles: Article[] = [
         title: "CES 2026에서 만난 미래 기술 돋보기",
         excerpt: "우리의 일상을 바꿀 혁신적인 가젯들",
         date: "2026. 02. 26",
-        author: "BlogChannel",
-        authorImg: "logo"
+        author: "듀엣미니",
+        authorImg: "/images/author_duetmini.png"
     }
 ];
 
@@ -68,7 +68,7 @@ export const gridArticles: Article[] = [
         excerpt: "두돌을 맞은 꼬마아가씨를 위해 주문해주신 캐릭터케이크",
         date: "2019. 05. 02",
         author: "듀엣미니",
-        authorImg: "/BlogC.svg"
+        authorImg: "/images/author_duetmini.png"
     },
     {
         id: 6,
@@ -79,7 +79,7 @@ export const gridArticles: Article[] = [
         excerpt: "얼그레이 시트에 생화와 달달한 딸기가 안성맞춤인 하트케이크",
         date: "2019. 04. 22",
         author: "듀엣미니",
-        authorImg: "/BlogC.svg"
+        authorImg: "/images/author_duetmini.png"
     },
     {
         id: 7,
@@ -90,7 +90,7 @@ export const gridArticles: Article[] = [
         excerpt: "공항 도착하자마자 달려간 제주 김만복! 이호테우 해변에서 맛보는 포송포송한 계란 김밥.",
         date: "2019. 04. 11",
         author: "듀엣미니",
-        authorImg: "/BlogC.svg"
+        authorImg: "/images/author_duetmini.png"
     },
     {
         id: 8,
@@ -101,7 +101,7 @@ export const gridArticles: Article[] = [
         excerpt: "불혹을 맞이하신 남편분의 생일을 기념하여 주문해주신 숫자케이크",
         date: "2019. 04. 17",
         author: "듀엣미니",
-        authorImg: "/BlogC.svg"
+        authorImg: "/images/author_duetmini.png"
     },
     // Section 2
     {
@@ -112,8 +112,8 @@ export const gridArticles: Article[] = [
         image: "/images/article_minimalist_desk_v2.png",
         excerpt: "어떤 다구로 첫자리를 여느냐가 그날의 맛과 기분을 좌우한다.",
         date: "2026. 02. 18",
-        author: "박주연",
-        authorImg: "https://i.pravatar.cc/100?img=5"
+        author: "듀엣미니",
+        authorImg: "/images/author_duetmini.png"
     },
     {
         id: 10,
@@ -123,8 +123,8 @@ export const gridArticles: Article[] = [
         image: "/images/article_workspace_coffee_v2.png",
         excerpt: "턴테이블과 스파오 조사병단 망토",
         date: "2026. 02. 06",
-        author: "BlogChannel",
-        authorImg: "logo"
+        author: "듀엣미니",
+        authorImg: "/images/author_duetmini.png"
     },
     {
         id: 11,
@@ -134,8 +134,8 @@ export const gridArticles: Article[] = [
         image: "/images/article_minimalist_desk_v2.png",
         excerpt: "비움으로써 채워지는 아름다움에 대하여",
         date: "2026. 02. 20",
-        author: "이지은",
-        authorImg: "https://i.pravatar.cc/100?img=1"
+        author: "듀엣미니",
+        authorImg: "/images/author_duetmini.png"
     },
     {
         id: 12,
@@ -145,8 +145,8 @@ export const gridArticles: Article[] = [
         image: "/images/article_workspace_coffee_v2.png",
         excerpt: "주말에 떠나기 좋은 아늑한 공간들",
         date: "2026. 02. 15",
-        author: "김민수",
-        authorImg: "https://i.pravatar.cc/100?img=2"
+        author: "듀엣미니",
+        authorImg: "/images/author_duetmini.png"
     },
     // Section 3
     {
@@ -157,8 +157,8 @@ export const gridArticles: Article[] = [
         image: "/images/duet-mini-heart-cake.jpg",
         excerpt: "직접 만드는 계절의 향기",
         date: "2026. 02. 24",
-        author: "플로리스트 강",
-        authorImg: "https://i.pravatar.cc/100?img=3"
+        author: "듀엣미니",
+        authorImg: "/images/author_duetmini.png"
     },
     {
         id: 14,
@@ -168,8 +168,8 @@ export const gridArticles: Article[] = [
         image: "/images/article_minimalist_desk_v2.png",
         excerpt: "마음을 다스리는 기록의 힘",
         date: "2026. 02. 22",
-        author: "정다운",
-        authorImg: "https://i.pravatar.cc/100?img=4"
+        author: "듀엣미니",
+        authorImg: "/images/author_duetmini.png"
     },
     {
         id: 15,
@@ -179,8 +179,8 @@ export const gridArticles: Article[] = [
         image: "/images/duet-mini-40-cake.jpg",
         excerpt: "집안 가득 퍼지는 달콤한 냄새",
         date: "2026. 02. 19",
-        author: "베이커 킴",
-        authorImg: "https://i.pravatar.cc/100?img=6"
+        author: "듀엣미니",
+        authorImg: "/images/author_duetmini.png"
     },
     {
         id: 16,
@@ -190,8 +190,8 @@ export const gridArticles: Article[] = [
         image: "/images/duet-mini-jeju.jpg",
         excerpt: "초록색이 주는 평온함과 생명력",
         date: "2026. 02. 10",
-        author: "그린썸",
-        authorImg: "https://i.pravatar.cc/100?img=7"
+        author: "듀엣미니",
+        authorImg: "/images/author_duetmini.png"
     },
     // Section 4
     {
@@ -202,8 +202,8 @@ export const gridArticles: Article[] = [
         image: "/images/hero_lifestyle_tech_magazine_v2.png",
         excerpt: "올해의 컬러로 꾸며보는 나만의 공간과 스타일",
         date: "2026. 02. 25",
-        author: "이지은",
-        authorImg: "https://i.pravatar.cc/100?img=1"
+        author: "듀엣미니",
+        authorImg: "/images/author_duetmini.png"
     },
     {
         id: 18,
@@ -213,8 +213,8 @@ export const gridArticles: Article[] = [
         image: "/images/article_workspace_coffee_v2.png",
         excerpt: "번잡함을 벗어나 만나는 도쿄의 진정한 매력",
         date: "2026. 02. 23",
-        author: "김민수",
-        authorImg: "https://i.pravatar.cc/100?img=2"
+        author: "듀엣미니",
+        authorImg: "/images/author_duetmini.png"
     },
     {
         id: 19,
@@ -224,8 +224,8 @@ export const gridArticles: Article[] = [
         image: "/images/article_minimalist_desk_v2.png",
         excerpt: "몸도 마음도 가벼워지는 맛있는 채식 생활",
         date: "2026. 02. 21",
-        author: "정다운",
-        authorImg: "https://i.pravatar.cc/100?img=4"
+        author: "듀엣미니",
+        authorImg: "/images/author_duetmini.png"
     },
     {
         id: 20,
@@ -235,8 +235,8 @@ export const gridArticles: Article[] = [
         image: "/images/article_modern_gadgets_v2.png",
         excerpt: "더 나은 월요일을 준비하는 작은 습관의 힘",
         date: "2026. 02. 19",
-        author: "최재원",
-        authorImg: "logo"
+        author: "듀엣미니",
+        authorImg: "/images/author_duetmini.png"
     }
 ];
 
