@@ -20,7 +20,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     {data.category}
                 </div>
 
-                <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-bold leading-[1.3] tracking-tight text-black mb-8 break-keep">
+                <h1 className="text-4xl sm:text-5xl lg:text-[5vw] font-bold leading-[1.3] tracking-tight text-black mb-8 break-keep">
                     <span className="border-b-[5px] border-black leading-[1.3]">{data.title.line1}</span><br className="hidden md:block" />
                     <span className="border-b-[5px] border-black leading-[1.3] mt-4 md:mt-0 inline-block">{data.title.line2}</span>
                     {data.title.line3 && (
@@ -49,7 +49,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
             </motion.div>
 
             {/* Body Content with Staggered Animations */}
-            <div className="px-8 lg:px-16 xl:px-24 pb-16 text-black text-[15px] leading-[1.6] tracking-tight break-keep flex flex-col">
+            <div className="px-8 lg:px-16 xl:px-24 pb-16 text-black text-[16px] leading-[1.6] tracking-tight break-keep flex flex-col">
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
