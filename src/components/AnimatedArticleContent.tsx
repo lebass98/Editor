@@ -14,48 +14,48 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="w-full relative flex flex-col justify-center px-8 lg:px-16 xl:px-24 min-h-[50vh] lg:min-h-screen pb-16 pt-32 lg:pt-0"
+                className="w-full relative flex flex-col justify-center px-8 lg:px-[30px] xl:px-[30px] lg:min-h-screen pb-16 pt-6 lg:pt-0 bg-[#3a3939] lg:bg-transparent text-white lg:text-black"
             >
-                <div className="text-sm font-bold tracking-widest text-black mb-6 uppercase">
+                <div className="text-sm font-bold tracking-widest text-white/80 lg:text-black mb-6 uppercase">
                     {data.category}
                 </div>
 
-                <h1 className="text-4xl sm:text-5xl lg:text-[5vw] font-bold leading-[1.3] tracking-tight text-black mb-8 break-keep">
-                    <span className="border-b-[5px] border-black leading-[1.3]">{data.title.line1}</span><br className="hidden md:block" />
-                    <span className="border-b-[5px] border-black leading-[1.3] mt-4 md:mt-0 inline-block">{data.title.line2}</span>
+                <h1 className="text-4xl sm:text-5xl lg:text-[5vw] font-bold leading-[1.3] tracking-tight text-white lg:text-black mb-8 break-keep">
+                    <span className="border-b-[5px] border-white lg:border-black leading-[1.3]">{data.title.line1}</span><br className="hidden md:block" />
+                    <span className="border-b-[5px] border-white lg:border-black leading-[1.3] mt-4 md:mt-0 inline-block">{data.title.line2}</span>
                     {data.title.line3 && (
                         <>
                             <br className="hidden md:block" />
-                            <span className="border-b-[5px] border-black leading-[1.3] mt-4 md:mt-0 inline-block">{data.title.line3}</span>
+                            <span className="border-b-[5px] border-white lg:border-black leading-[1.3] mt-4 md:mt-0 inline-block">{data.title.line3}</span>
                         </>
                     )}
                 </h1>
 
-                <p className="text-[16px] font-bold text-black mb-12 lg:mb-16">
+                <p className="text-[16px] font-bold text-white/90 lg:text-black mb-12 lg:mb-16">
                     {data.excerpt}
                 </p>
 
-                <div className="text-[13px] font-bold text-black">
+                <div className="text-[13px] font-bold text-white/80 lg:text-black">
                     {data.date}
                 </div>
 
                 {/* Author Badge Pinned Bottom Right of this header block */}
                 <div className="absolute bottom-8 right-8 lg:bottom-16 lg:right-16 flex flex-col items-center">
-                    <div className="w-12 h-12 rounded-full overflow-hidden mb-2 border border-black/10 shadow-sm flex items-center justify-center bg-white">
+                    <div className="w-12 h-12 rounded-full overflow-hidden mb-2 border border-white/20 lg:border-black/10 shadow-sm flex items-center justify-center bg-white">
                         <Image src={getImagePath(data.authorImg)} alt={data.author} width={32} height={32} className="object-contain" />
                     </div>
-                    <span className="text-[12px] font-bold text-black">{data.author}</span>
+                    <span className="text-[12px] font-bold text-white lg:text-black">{data.author}</span>
                 </div>
             </motion.div>
 
             {/* Body Content with Staggered Animations */}
-            <div className="px-8 lg:px-16 xl:px-24 pb-16 text-black text-[16px] leading-[1.6] tracking-tight break-keep flex flex-col">
+            <div className="mt-12 pb-16 text-black text-[16px] leading-[1.6] tracking-tight break-keep flex flex-col">
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="mb-8"
+                    className="mb-8 px-3 lg:px-16 xl:px-24"
                 >
                     {data.body1}
                 </motion.p>
@@ -65,7 +65,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-                    className="mb-12"
+                    className="mb-12 px-3 lg:px-16 xl:px-24"
                 >
                     {data.body2}
                 </motion.p>
@@ -75,7 +75,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="my-16 flex justify-center border-y border-black py-8"
+                    className="my-16 flex justify-center border-y border-black py-8 mx-3 lg:mx-16 xl:mx-24"
                 >
                     <h2 className={`text-2xl font-bold text-center ${data.h2color} italic`}>
                         {data.h2.line1}<br />
@@ -88,7 +88,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="mb-8"
+                    className="mb-8 px-3 lg:px-16 xl:px-24"
                 >
                     {data.body3}
                 </motion.p>
@@ -98,7 +98,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="mb-12 relative w-full bg-zinc-100 rounded-lg overflow-hidden border border-zinc-200 shadow-sm"
+                    className="mb-12 relative w-full bg-zinc-100 lg:rounded-lg lg:border lg:border-zinc-200 lg:shadow-sm lg:mx-16 xl:mx-24 overflow-hidden"
                 >
                     <Image src={getImagePath(data.figureImage)} alt={data.title.line1} width={800} height={600} className="w-full h-auto object-contain" />
                 </motion.figure>
@@ -108,7 +108,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="mb-8"
+                    className="mb-8 px-3 lg:px-16 xl:px-24"
                 >
                     {data.body4}
                 </motion.p>
@@ -118,7 +118,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-                    className="mb-8"
+                    className="mb-8 px-3 lg:px-16 xl:px-24"
                 >
                     {data.body5}
                 </motion.p>
@@ -128,7 +128,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-                    className="mb-16"
+                    className="mb-16 px-3 lg:px-16 xl:px-24"
                 >
                     {data.body6}<br /><br />
                     {data.body7.split('\n').map((line: string, i: number) => (
@@ -142,7 +142,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="mt-20 pt-10 border-t border-zinc-200"
+                    className="mt-20 pt-10 border-t border-zinc-200 px-3 lg:px-16 xl:px-24"
                 >
                     <div className="text-[13px] font-bold mb-6 uppercase tracking-wider">ABOUT AUTHOR</div>
                     <div className="flex items-start gap-5">

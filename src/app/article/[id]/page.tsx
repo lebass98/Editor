@@ -467,12 +467,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
       </section>
 
       {/* Full Width Related Articles Section */}
-      <section className="w-full px-6 md:px-12 lg:px-16 py-16 lg:py-24 bg-[#fcfcfc]">
-        <h2 className="text-xl font-bold mb-10 text-black">관련 기사</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      <section className="w-full px-4 md:px-12 lg:px-16 py-12 lg:py-24 bg-[#fcfcfc]">
+        <h2 className="text-lg md:text-xl font-bold mb-8 text-black">관련 기사</h2>
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {mockRelated.map((article) => (
             <Link key={article.id} href={`/article/${article.id}`} className="group flex flex-col h-full bg-transparent">
-              <div className="relative overflow-hidden aspect-[4/5] object-cover bg-zinc-200 w-full mb-4 group-hover:bg-zinc-300 transition-colors">
+              <div className="relative overflow-hidden aspect-[4/5] object-cover bg-zinc-200 w-full mb-3 group-hover:bg-zinc-300 transition-colors">
                 <Image
                   src={getImagePath(article.image)}
                   alt={article.title}
@@ -480,32 +480,32 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
                   className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-4 left-4 text-white font-bold text-sm uppercase tracking-widest drop-shadow-md z-10">
+                <div className="absolute bottom-3 left-3 text-white font-bold text-[10px] md:text-sm uppercase tracking-widest drop-shadow-md z-10">
                   {article.category}
                 </div>
               </div>
 
               <div className="flex flex-col flex-1">
-                <h3 className="text-xl md:text-[22px] font-bold leading-tight mb-3 break-keep tracking-tight text-black">
+                <h3 className="text-sm md:text-xl font-bold leading-tight mb-2 break-keep tracking-tight text-black line-clamp-2">
                   {article.title}
                 </h3>
-                <p className="text-[13px] font-medium leading-relaxed mb-6 break-keep text-zinc-600">
+                <p className="text-[11px] md:text-[13px] font-medium leading-relaxed mb-4 break-keep text-zinc-600 line-clamp-2">
                   {article.excerpt}
                 </p>
 
-                <div className="flex items-center justify-between mt-auto pt-4 relative text-black">
-                  <span className="text-[11px] font-medium text-zinc-500">{article.date}</span>
+                <div className="flex items-center justify-between mt-auto pt-2 relative text-black border-t border-zinc-100">
+                  <span className="text-[9px] md:text-[11px] font-medium text-zinc-500">{article.date}</span>
                   <div className="flex flex-col items-center">
                     {article.authorImg === "logo" ? (
-                      <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold italic mb-1 shrink-0 text-[7px] border shadow-sm tracking-tighter">
+                      <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-black text-white flex items-center justify-center font-bold italic mb-1 shrink-0 text-[6px] md:text-[7px] border shadow-sm tracking-tighter">
                         BlogChannel
                       </div>
                     ) : (
-                      <div className="w-8 h-8 rounded-full overflow-hidden mb-1 shrink-0 border border-black/10 shadow-sm">
-                        <Image src={getImagePath(article.authorImg)} alt={article.author} width={32} height={32} className="object-cover" />
+                      <div className="w-6 h-6 md:w-8 md:h-8 rounded-full overflow-hidden mb-1 shrink-0 border border-black/10 shadow-sm">
+                        <Image src={getImagePath(article.authorImg)} alt={article.author} width={32} height={32} className="object-cover w-full h-full" />
                       </div>
                     )}
-                    <span className="text-[10px] font-bold text-zinc-700">{article.author}</span>
+                    <span className="text-[8px] md:text-[10px] font-bold text-zinc-700">{article.author}</span>
                   </div>
                 </div>
               </div>
