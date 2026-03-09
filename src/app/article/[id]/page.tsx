@@ -16,7 +16,7 @@ export function generateStaticParams() {
 const mockRelated = [
   {
     id: 1,
-    title: "결혼식의 퀄리티를 높여주는 예쁜 웨딩케이크💙",
+    title: "결婚식의 퀄리티를 높여주는 예쁜 웨딩케이크💙",
     category: "WEDDING",
     image: "/images/duet-mini-cake.jpg",
     excerpt: "퍼플위주로 작업한 심플한 2단 웨딩케이크",
@@ -59,7 +59,7 @@ const mockRelated = [
 const MOCK_ARTICLE_DATA: Record<string, any> = {
   '1': {
     category: 'WEDDING',
-    title: { line1: '결혼식의 퀄리티를', line2: '높여주는 예쁜', line3: '웨딩케이크💙' },
+    title: { line1: '결婚식의 퀄리티를', line2: '높여주는 예쁜', line3: '웨딩케이크💙' },
     excerpt: '퍼플위주로 작업한 심플한 2단 웨딩케이크',
     date: '2019. 05. 08',
     author: '듀엣미니',
@@ -72,7 +72,7 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
     body3: '신부님께서 특별히 퍼플그린으로 해달라고 요청하셔서 퍼플위주로 작업한 심플한 2단 웨딩케이크입니다💓 금요일에 꽃집에가서 직접 골라온 싱싱한 꽃들!',
     figureImage: '/images/duet-mini-cake.jpg',
     body4: '열심히 작업중인 저 흐흐... 완성! 넘 이쁘죠? 포장도 까다로운 2단케이크지만 꼼꼼히 포장해서 결혼식장까지 배송 후 세팅까지 완료☺️',
-    body5: '결혼식장도 너무 이쁘고❣️ 신랑 신부도 너무 선남선녀였어요😍 결혼 넘넘 축하드리고 주문해주셔서 감사합니다😖',
+    body5: '결婚식장도 너무 이쁘고❣️ 신랑 신부도 너무 선남선녀였어요😍 결혼 넘넘 축하드리고 주문해주셔서 감사합니다😖',
     body6: "'듀엣미니케이크'는 늘 신선한 재료와 최고급 생화를 사용합니다.",
     body7: "✔️kakao ID. 듀엣미니\n✔️베이킹클래스.원데이클래스 진행중"
   },
