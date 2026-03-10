@@ -55,7 +55,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="mb-8 px-3 lg:px-16 xl:px-24"
+                    className="mb-8 px-3 lg:px-[30px] xl:px-[30px]"
                 >
                     {data.body1}
                 </motion.p>
@@ -65,7 +65,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-                    className="mb-12 px-3 lg:px-16 xl:px-24"
+                    className="mb-12 px-3 lg:px-[30px] xl:px-[30px]"
                 >
                     {data.body2}
                 </motion.p>
@@ -75,7 +75,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="my-16 flex justify-center border-y border-black py-8 mx-3 lg:mx-16 xl:mx-24"
+                    className="my-16 flex justify-center border-y border-black py-8 mx-3 lg:mx-[30px] xl:mx-[30px]"
                 >
                     <h2 className={`text-2xl font-bold text-center ${data.h2color} italic`}>
                         {data.h2.line1}<br />
@@ -88,7 +88,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="mb-8 px-3 lg:px-16 xl:px-24"
+                    className="mb-8 px-3 lg:px-[30px] xl:px-[30px]"
                 >
                     {data.body3}
                 </motion.p>
@@ -98,7 +98,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="mb-12 relative w-full bg-zinc-100 lg:rounded-lg lg:border lg:border-zinc-200 lg:shadow-sm lg:mx-16 xl:mx-24 overflow-hidden"
+                    className="mb-12 relative w-full lg:w-auto bg-zinc-100 lg:rounded-lg lg:border lg:border-zinc-200 lg:shadow-sm lg:mx-[30px] xl:mx-[30px] overflow-hidden"
                 >
                     <Image src={getImagePath(data.figureImage)} alt={data.title.line1} width={800} height={600} className="w-full h-auto object-contain" />
                 </motion.figure>
@@ -108,7 +108,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="mb-8 px-3 lg:px-16 xl:px-24"
+                    className="mb-8 px-3 lg:px-[30px] xl:px-[30px]"
                 >
                     {data.body4}
                 </motion.p>
@@ -118,7 +118,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-                    className="mb-8 px-3 lg:px-16 xl:px-24"
+                    className="mb-8 px-3 lg:px-[30px] xl:px-[30px]"
                 >
                     {data.body5}
                 </motion.p>
@@ -128,7 +128,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-                    className="mb-16 px-3 lg:px-16 xl:px-24"
+                    className="mb-16 px-3 lg:px-[30px] xl:px-[30px]"
                 >
                     {data.body6}<br /><br />
                     {data.body7.split('\n').map((line: string, i: number) => (
@@ -142,7 +142,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="mt-20 pt-10 border-t border-zinc-200 px-3 lg:px-16 xl:px-24"
+                    className="mt-20 pt-10 border-t border-zinc-200 px-3 lg:px-[30px] xl:px-[30px]"
                 >
                     <div className="text-[13px] font-bold mb-6 uppercase tracking-wider">ABOUT AUTHOR</div>
                     <div className="flex items-start gap-5">
