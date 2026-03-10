@@ -20,8 +20,8 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     {data.category}
                 </div>
 
-                <h1 className="text-4xl sm:text-5xl lg:text-[5vw] font-bold leading-[1.4] tracking-tight text-white lg:text-black mb-8 break-keep word-break-keep-all pr-5">
-                    <span className="border-b-[5px] border-white lg:border-black pb-1">
+                <h1 className="text-4xl sm:text-5xl lg:text-[5vw] font-bold leading-[1.5] lg:leading-[1.15] tracking-tight text-white lg:text-black mb-8 break-keep word-break-keep-all pr-5">
+                    <span className="underline decoration-[4px] lg:decoration-[.4vw] underline-offset-[5px] lg:underline-offset-[.8vw] decoration-white lg:decoration-black">
                         {[data.title.line1, data.title.line2, data.title.line3].filter(Boolean).join(' ')}
                     </span>
                 </h1>
