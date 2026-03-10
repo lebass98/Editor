@@ -20,15 +20,10 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                     {data.category}
                 </div>
 
-                <h1 className="text-4xl sm:text-5xl lg:text-[5vw] font-bold leading-[1.3] tracking-tight text-white lg:text-black mb-8 break-keep">
-                    <span className="border-b-[5px] border-white lg:border-black leading-[1.3]">{data.title.line1}</span><br className="hidden md:block" />
-                    <span className="border-b-[5px] border-white lg:border-black leading-[1.3] mt-4 md:mt-0 inline-block">{data.title.line2}</span>
-                    {data.title.line3 && (
-                        <>
-                            <br className="hidden md:block" />
-                            <span className="border-b-[5px] border-white lg:border-black leading-[1.3] mt-4 md:mt-0 inline-block">{data.title.line3}</span>
-                        </>
-                    )}
+                <h1 className="text-4xl sm:text-5xl lg:text-[5vw] font-bold leading-[1.4] tracking-tight text-white lg:text-black mb-8 break-keep word-break-keep-all pr-5">
+                    <span className="border-b-[5px] border-white lg:border-black pb-1">
+                        {[data.title.line1, data.title.line2, data.title.line3].filter(Boolean).join(' ')}
+                    </span>
                 </h1>
 
                 <p className="text-[16px] font-bold text-white/90 lg:text-black mb-12 lg:mb-16">
