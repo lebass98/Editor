@@ -1,9 +1,10 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
 @import "tailwindcss";
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-pretendard-gov), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: "Pretendard", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 :root {
@@ -21,7 +22,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-pretendard-gov), ui-sans-serif, system-ui, sans-serif;
+  font-family: "Pretendard", ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Ensure form elements inherit the global font */

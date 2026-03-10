@@ -469,9 +469,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
       {/* Full Width Related Articles Section */}
       <section className="w-full px-4 md:px-12 lg:px-[30px] py-16 lg:py-24 bg-[#fcfcfc]">
         <h2 className="text-xl font-bold mb-10 text-black border-b border-black pb-4 uppercase tracking-tighter">관련 기사</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-[10px]">
           {mockRelated.map((article) => (
-            <Link key={article.id} href={`/article/${article.id}`} className="group flex flex-row gap-5 bg-transparent border-b border-zinc-100 lg:border-0 pb-10 lg:pb-0 relative h-full">
+            <Link key={article.id} href={`/article/${article.id}`} className="group flex flex-row gap-5 bg-transparent border-b border-zinc-100 lg:border-0 pb-[10px] lg:pb-0 relative h-full">
               <div className="relative overflow-hidden aspect-[3/4] w-[40%] md:w-[35%] shrink-0 bg-zinc-200">
                 <Image
                   src={getImagePath(article.image)}
