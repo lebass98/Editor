@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function AnimatedArticleContent({ data }: { data: any }) {
     return (
-        <div className="w-full lg:w-1/2 bg-[#fcfcfc] text-black relative z-10 flex flex-col shadow-[-10px_0_30px_rgba(0,0,0,0.05)]">
+        <div className="w-full lg:w-1/2 bg-[#fbfcf6] text-black relative z-10 flex flex-col shadow-[-10px_0_30px_rgba(0,0,0,0.05)]">
             {/* Header Block with Animation */}
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
