@@ -467,7 +467,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
       </section>
 
       {/* Full Width Related Articles Section */}
-      <section className="w-full px-4 md:px-12 lg:px-16 py-12 lg:py-24 bg-[#fcfcfc]">
+      <section className="w-full px-4 md:px-12 lg:px-[30px] py-12 lg:py-24 bg-[#fcfcfc]">
         <h2 className="text-lg md:text-xl font-bold mb-8 text-black">관련 기사</h2>
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {mockRelated.map((article) => (

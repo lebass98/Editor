@@ -40,7 +40,7 @@ export default function AnimatedArticleContent({ data }: { data: any }) {
                 </div>
 
                 {/* Author Badge Pinned Bottom Right of this header block */}
-                <div className="absolute bottom-8 right-8 lg:bottom-16 lg:right-16 flex flex-col items-center">
+                <div className="absolute bottom-8 right-8 lg:bottom-16 lg:right-[30px] flex flex-col items-center">
                     <div className="w-12 h-12 rounded-full overflow-hidden mb-2 border border-white/20 lg:border-black/10 shadow-sm flex items-center justify-center bg-white">
                         <Image src={getImagePath(data.authorImg)} alt={data.author} width={32} height={32} className="object-contain" />
                     </div>
