@@ -1,88 +1,95 @@
 # The Edit Clone Project 📰
 
-디에디트(https://blogC.co.kr/) 매거진의 감각적인 UI와 50:50 좌우 분할 스플릿 레이아웃을 클론 코딩한 웹 애플리케이션 화면 구현 저장소입니다. 세련된 고대비 색상과 타이포그래피, 매끄러운 오버레이 메뉴, 그리고 지그재그 그리드 기반의 기사 레이아웃을 반응형으로 구성했습니다.
+디에디트(https://the-edit.co.kr/) 매거진의 감각적인 UI와 50:50 좌우 분할 스플릿 레이아웃을 클론 코딩한 웹 애플리케이션입니다.
 
 - **GitHub Repository**: [https://github.com/lebass98/Editor](https://github.com/lebass98/Editor)
-- **Live Demo**: [https://lebass98.github.io/Editor/](https://lebass98.github.io/Editor/) (예정)
+- **Live Demo**: [https://lebass98.github.io/Editor/](https://lebass98.github.io/Editor/)
 
-## 🚀 기술 스택 (Tech Stack)
+## 🚀 최신 업데이트 및 주요 기능 (New Features)
 
-- **Framework**: Next.js 15+ (App Router)
-- **Library**: React 19
-- **Language**: TypeScript 5
-- **Styling**: Tailwind CSS v4
-- **Icons**: Lucide React
-- **Typography**: Pretendard GOV (Local Font)
+최근 업데이트를 통해 단순한 클론 코딩을 넘어, 실제 블로그 운영이 가능한 수준의 기능을 대거 확충했습니다.
 
-## 📌 주요 레이아웃 및 기능
+### 1. Markdown 기반 기사 관리 시스템
+코드를 수정하지 않고도 글을 올릴 수 있는 환경을 구축했습니다.
+- **데이터 소스 분리**: `src/content/articles/` 폴더에 `.md` 파일을 생성하는 것만으로 새로운 글 게시 가능.
+- **Frontmatter 지원**: 제목, 날짜, 카테고리, 저자 등의 메타데이터를 마크다운 상단에서 관리.
+- **자동 파싱**: `gray-matter`를 사용하여 마크다운 콘텐츠를 HTML로 변환하여 렌더링.
 
-### 1. 전면 개편된 50:50 스플릿 레이아웃 (Split Screen Layout)
-- 메인 홈페이지(`page.tsx`)는 스크롤마다 좌우 영역의 역할이 서로 뒤바뀌는 3개의 독특한 섹션으로 구성됩니다.
-  - **섹션 1 (Black/White)**: [좌] 고정된(Sticky) 히어로 섹션 / [우] 2단 스크롤 아티클 그리드
-  - **섹션 2 (Ivory)**: [좌] 2단 스크롤 아티클 그리드 / [우] 고정된(Sticky) 히어로 섹션
-  - **섹션 3 (Black/White)**: [좌] 고정된(Sticky) 히어로 섹션 / [우] 2단 스크롤 아티클 그리드
-- 좌우 대조의 직관적이고 세련된 매거진 뷰를 제공합니다.
+### 2. 다크 모드 & 라이트 모드 지원
+사용자 환경에 맞춘 최적화된 시각적 경험을 제공합니다.
+- **테마 토글**: 헤더 상단의 아이콘을 통해 즉시 테마 전환 가능.
+- **시스템 감지**: OS 설정에 따른 자동 테마 적용 및 설정 기억(Local Storage).
+- **디자인 최적화**: 모든 컴포넌트(그리드, 상세 페이지, 메뉴)에 다크 모드 전용 스타일 적용.
 
-### 2. 프리미엄 디자인 및 UI/UX 디테일
-- **Magazine Aesthetic**: 불필요한 기술적 정보(ID 등)를 UI에서 숨기고(주석 처리), 오직 콘텐츠에만 집중할 수 있는 깔끔한 메거진 레이아웃을 지향합니다.
-- **Glassmorphism**: 내비게이션 및 배지 요소에 유리 질감의 효과를 적용하여 고급스러운 느낌을 더했습니다.
-- **Micro-animations**: 아티클 카드 호버 시 부드러운 스케일링(Scale-105)과 그라데이션 오버레이 효과를 적용했습니다.
-- **Scroll Fade-in Animations**: `framer-motion`을 도입하여 페이지 스크롤 시 기사 모음과 메인 뷰 섹션들이 부드럽게 나타나는 등장 애니메이션을 적용했습니다.
+### 3. 지능형 SEO 및 읽기 시간 측정
+검색 엔진 최적화와 사용자 편의 기능을 자동화했습니다.
+- **자동 SEO 배포**: 각 기사의 제목과 요약을 기반으로 meta tag 및 OpenGraph 태그 자동 생성.
+- **Reading Time 측정**: 본문의 길이를 분석하여 'n분 읽기' 정보를 기사 상단에 표시.
 
-### 3. 전체 화면 햄버거 메뉴 (Slide-in Menu Overlay)
-- 우측 상단 햄버거 메뉴를 클릭 시 우측 50%를 차지하는 전체 화면 슬라이드 오버레이가 등장.
-- 내부에는 `TECH`, `EAT`, `STYLE` 등 카테고리별 글로벌 브레드크럼(breadcrumbs) 내비게이션 탑재.
+### 4. 다중 작성자(Author) 및 프로필 시스템
+여러 명의 에디터가 협업하는 환경을 고려했습니다.
+- **작성자 DB**: `src/data/authors.ts`에서 각 에디터의 프로필(이미지, 소개글, SNS) 통합 관리.
+- **동적 프로필 매핑**: 기사 작성자 이름에 맞춰 에디터 정보 자동 표시.
 
-### 4. 지그재그 메이슨리 스타일 그리드 (Staggered Grid)
-- 아티클 썸네일 그리드는 이미지 카드 두 열을 번갈아가면서 좌측과 우측의 높이 단차(`mt-32`)를 주도록 설계됨.
-- 네온 라임색과 까만 테두리를 지연 없이 깔끔하게 올려 단일 배경에서 카드들이 더 돋보임.
+### 5. Skeleton 로딩 UI
+콘텐츠 로딩 시의 시각적 공백을 채우는 세련된 로딩 상태를 구현했습니다.
+- **스켈레톤 카드**: 검색 결과나 목록 로드 시 부드러운 애니메이션 박스 표시.
 
-### 5. 하단 앵커형 푸터 (Smart Footer)
-- 마지막 섹션을 스크롤 한 뒤 자연스럽게 올라오는 100% Full-Width 하단 푸터 영역.
-- 부드러운 전환 효과가 있는 '위로가기(Chevron Up)' 앵커 버튼 탑재.
+---
 
-### 6. 페이지 라우팅 적용
-- **홈페이지 (`/`)**: 50/50 3단 매거진 그리드.
-- **카테고리 리스트 (`/category/[slug]`)**: 메인 메뉴 클릭를 시 넘어가는 카테고리 갤러리 기사 목록.
-- **아티클 상세 문구 (`/article/[id]`)**: 클릭한 기사의 상세 정보와 텍스트를 담은 글 본문 페이지.
+## 📌 주요 레이아웃 가이드
 
-## ⚙️ 실행 방법 (Getting Started)
+### 1. 50:50 스플릿 레이아웃
+- 메인 홈페이지(`page.tsx`)는 스크롤마다 좌우 영역의 역할이 서로 뒤바뀌는 섹션들로 구성됩니다.
+- 한쪽은 고정(Sticky), 다른 한쪽은 스크롤되는 감각적인 경험을 제공합니다.
 
-저장소를 클론한 후 패키지를 설치하고 로컬 서버를 가동합니다.
+### 2. 전체 화면 햄버거 메뉴 및 검색
+- 우측 상단 메뉴 클릭 시 검색창이 포함된 전체 화면 슬라이드 오버레이가 등장합니다.
+- 모바일 환경에서도 최적화된 가로형 검색 결과 레이아웃을 지원합니다.
 
+---
+
+## ⚙️ 개발 및 설정 가이드
+
+### 실행 방법
 ```bash
 # 패키지 설치
 npm install
 
-# 개발 서버 실행 (localhost:3000)
+# 개발 서버 실행
 npm run dev
 ```
 
-## 📂 주요 폴더 구조 (Folder Structure)
+### 새로운 글 작성하기 (Markdown)
+1. `src/content/articles/` 폴더로 이동합니다.
+2. `[파일명].md` 파일을 생성합니다.
+3. 아래 형식에 맞춰 내용을 작성합니다.
 
-```text
-src/
-├── app/
-│   ├── article/
-│   │   └── [id]           # 개별 기사 본문 상세 페이지
-│   ├── category/
-│   │   └── [slug]         # 개별 카테고리형 갤러리 리스트
-│   ├── fonts/             # 로컬 폰트 적용 (Pretendard GOV)
-│   ├── layout.tsx         # 글로벌 레이아웃 및 폰트, 메타데이터
-│   ├── page.tsx           # 좌우 스플릿의 3단 메인 홈페이지
-│   └── globals.css        # 글로벌/테마 스타일링
-│
-└── components/
-    ├── Navbar.tsx         # 전역 Floating 헤더 (로고 & 햄버거 오버레이)
-    ├── HeroSection.tsx    # 50vw Sticky 좌/우 파트형 대형 이미지
-    ├── ArticleGrid.tsx    # 메이슨리 스타일 2단 기사 카드 모음
-    ├── AnimatedArticleContent.tsx # 스크롤 애니메이션이 적용된 기사 상세 컴포넌트
-    └── Footer.tsx         # Bottom-pinned 푸터 컴포넌트
+```markdown
+---
+id: 100
+title: "글 제목"
+category: "TECH"
+date: "2026. 03. 16"
+author: "duetmini"
+excerpt: "내용 요약"
+heroImage: "/images/hero.jpg"
+---
+본문 내용을 이곳에 작성하세요.
 ```
 
-## 🛠 주요 데이터 및 기술 사양
-- **데이터 관리**: 모든 기사 정보는 `src/data/articles.ts`에서 통합 관리되며, 상세 페이지는 이를 기반으로 동적으로 렌더링됩니다.
-- **이미지 최적화**: Next.js `Image` 컴포넌트를 사용하여 LCP(Largest Contentful Paint)를 최적화했으며, 50/50 레이아웃에 최적화된 `object-cover` 속성을 사용합니다.
-- **글꼴 정보**: 프리미엄 매거진 룩을 위해 굵은 폰트(Black) 가중치를 조정하여 가독성과 심미성을 확보했습니다.
+### 새로운 작성자 추가하기
+1. `src/data/authors.ts` 파일을 엽니다.
+2. `authors` 객체에 새로운 작성자 정보를 추가합니다.
+
+---
+
+## 📂 폴더 구조
+- `src/app/`: Next.js App Router 기반 페이지 구성
+- `src/components/`: 재사용 가능한 UI 컴포넌트 (Navbar, Grid, Skeleton 등)
+- `src/content/`: 실제 마크다운 기사 데이터
+- `src/data/`: 작성자 및 기존 고정 기사 데이터
+- `src/utils/`: 마크다운 파서 및 이미지 경로 처리 유틸리티
+
 ---
 © THE EDIT CLONE PROJECT.
