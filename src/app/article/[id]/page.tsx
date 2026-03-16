@@ -5,11 +5,53 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimatedArticleContent from "@/components/AnimatedArticleContent";
 
+import { Metadata } from "next";
 import ReadingProgressBar from "@/components/ReadingProgressBar";
+import { getAllArticlesContent, getArticleById } from "@/utils/markdown";
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const markdownData = getArticleById(id);
+  const data = markdownData || MOCK_ARTICLE_DATA[id] || MOCK_ARTICLE_DATA['1'];
+  
+  const titleText = data.titleLines ? 
+    [data.titleLines.line1, data.titleLines.line2, data.titleLines.line3].filter(Boolean).join(' ') :
+    (typeof data.title === 'string' ? data.title : (data.title?.line1 || "결혼식의 퀄리티를 높여주는 예쁜 웨딩케이크💙"));
+
+  return {
+    title: `${titleText} | 듀엣미니 블로그`,
+    description: data.excerpt,
+    openGraph: {
+      title: titleText,
+      description: data.excerpt,
+      images: [{ url: data.heroImage }],
+      type: 'article',
+      authors: [data.author],
+    }
+  };
+}
+
+// Helper to calculate reading time
+function calculateReadingTime(data: any) {
+  const content = data.content || (
+    (data.body1 || "") + (data.body2 || "") + (data.body3 || "") + 
+    (data.body4 || "") + (data.body5 || "") + (data.body6 || "") + (data.body7 || "")
+  );
+  const wordsPerMinute = 200;
+  const wordCount = content.trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(wordCount / wordsPerMinute));
+}
 
 // Generate static params for categories
 export function generateStaticParams() {
-  return Array.from({ length: 20 }, (_, i) => ({ id: (i + 1).toString() }));
+  const markdownArticles = getAllArticlesContent();
+  const markdownIds = markdownArticles.map(a => a.id.toString());
+  const mockIds = Object.keys(MOCK_ARTICLE_DATA);
+  
+  // Combine all unique IDs from both sources
+  const allIds = Array.from(new Set([...markdownIds, ...mockIds]));
+  
+  return allIds.map(id => ({ id }));
 }
 
 
@@ -439,10 +481,16 @@ const MOCK_ARTICLE_DATA: Record<string, any> = {
   }
 };
 
+// ... (keep mockRelated and MOCK_ARTICLE_DATA for fallback if needed)
 
 export default async function ArticlePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const data = MOCK_ARTICLE_DATA[id] || MOCK_ARTICLE_DATA['1'];
+
+  // 1. Try to get from Markdown
+  const markdownData = getArticleById(id);
+
+  // 2. Fallback to Mock Data
+  const data = markdownData || MOCK_ARTICLE_DATA[id] || MOCK_ARTICLE_DATA['1'];
 
   return (
     <div className="min-h-screen bg-[#fcfcfc] text-black">
@@ -455,7 +503,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
         <div className="w-full lg:w-1/2 h-[50vh] lg:h-screen lg:sticky top-0 relative shrink-0 z-0 bg-black overflow-hidden">
           <Image
             src={getImagePath(data.heroImage)}
-            alt={data.title.line1}
+            alt={data.titleLines ? data.titleLines.line1 : (typeof data.title === 'string' ? data.title : data.title.line1)}
             fill
             className="object-cover opacity-90"
             priority
