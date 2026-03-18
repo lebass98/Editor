@@ -33,7 +33,7 @@ export default function HeroSection({ index = 0 }: { index?: number }) {
           <div className="mb-3 font-bold uppercase tracking-widest text-xs md:text-sm">
             {data.category}
           </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight drop-shadow-lg break-keep w-[80%]">
+          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold mb-4 leading-tight drop-shadow-lg break-keep w-[80%]">
             {data.title}
           </h1>
           <p className="text-zinc-300 text-sm md:text-base mb-6 drop-shadow-md">
