@@ -66,8 +66,8 @@ export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" })
           {/* Logo - Pinned Top Left */}
           <Link href="/" className="pointer-events-auto">
             <Image
-              src={getImagePath("/BlogC.svg")}
-              alt="듀엣미니"
+              src={getImagePath("/BlogC_logo.svg")}
+              alt="BLOG. C"
               width={200}
               height={40}
               className={`w-auto h-8 sm:h-9 object-contain drop-shadow-sm ${isLight ? "invert" : ""}`}
@@ -174,7 +174,7 @@ export default function Navbar({ theme = "dark" }: { theme?: "dark" | "light" })
               </div>
             </div>
             <p className="text-[11px] text-zinc-500 dark:text-zinc-400 font-medium">
-              © 2026 THE EDIT. ALL RIGHTS RESERVED.
+              © 2026 BLOG. C. ALL RIGHTS RESERVED.
             </p>
           </div>
         </div>

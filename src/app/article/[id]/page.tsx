@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     (typeof data.title === 'string' ? data.title : (data.title?.line1 || "결혼식의 퀄리티를 높여주는 예쁜 웨딩케이크💙"));
 
   return {
-    title: `${titleText} | 듀엣미니 블로그`,
+    title: `${titleText} | BLOG. C`,
     description: data.excerpt,
     openGraph: {
       title: titleText,

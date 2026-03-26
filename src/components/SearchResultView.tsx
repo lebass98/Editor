@@ -103,13 +103,13 @@ export default function SearchResultView() {
                         <div className="flex items-center gap-3">
                           <div className="flex flex-col items-end">
                               <Image 
-                                src={getImagePath("/BlogC.svg")} 
-                                alt="The Edit" 
+                                src={getImagePath("/BlogC_logo.svg")} 
+                                alt="BLOG. C" 
                                 width={40} 
                                 height={16} 
                                 className="h-3 w-auto object-contain brightness-0 dark:invert opacity-80 mb-0.5" 
                               />
-                              <span className="text-[11px] font-bold text-zinc-800 dark:text-zinc-300">디에디트</span>
+                              <span className="text-[11px] font-bold text-zinc-800 dark:text-zinc-300">BLOG. C</span>
                           </div>
                           <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 border border-zinc-200 dark:border-zinc-700">
                             <Image 
@@ -128,14 +128,14 @@ export default function SearchResultView() {
                         <div className="flex flex-col items-center">
                           <div className="w-10 h-10 rounded-full bg-black dark:bg-white flex items-center justify-center mb-1">
                             <Image 
-                              src={getImagePath("/BlogC.svg")} 
-                              alt="The Edit" 
+                              src={getImagePath("/BlogC_logo.svg")} 
+                              alt="BLOG. C" 
                               width={32} 
                               height={12} 
                               className="w-7 h-auto object-contain invert dark:invert-0" 
                             />
                           </div>
-                          <span className="text-[10px] font-bold text-black dark:text-white">디에디트</span>
+                          <span className="text-[10px] font-bold text-black dark:text-white">BLOG. C</span>
                         </div>
                       </div>
                     </div>

@@ -17,8 +17,8 @@ export default function Footer() {
         {/* Logo Section */}
         <Link href="/" className="mb-10">
           <Image
-            src={getImagePath("/BlogC.svg")}
-            alt="듀엣미니"
+            src={getImagePath("/BlogC_logo.svg")}
+            alt="BLOG. C"
             width={280}
             height={55}
             className="w-auto h-12 md:h-16 object-contain"
@@ -50,7 +50,7 @@ export default function Footer() {
 
         {/* Copyright Section */}
         <div className="text-[14px] md:text-xs text-zinc-500 font-medium tracking-tight uppercase">
-          서울 가산©듀엣미니. ALL RIGHTS RESERVED.
+          서울 가산©BLOG. C. ALL RIGHTS RESERVED.
         </div>
 
         {/* Scroll To Top Button */}
